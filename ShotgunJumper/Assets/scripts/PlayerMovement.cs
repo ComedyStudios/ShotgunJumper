@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -8,23 +9,29 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInputActions _playerInputActions;
     private SpriteRenderer _gunSprite;
     private Vector3 _aimDirection;
-    private LayerMask _mask = 1 << 6;
     private Gun _shotgun;
     private Gun _gunInHand;
     private float _angle;
+    private bool _canShoot;
+    private float _shootingforce;
 
-    public GameObject bullet;
+    public float timeBetweenShots;
+    public float effectiveJumpPadDistance;
+    public float maxPlayerSpeedX;
+    public float maxPlayerSpeedY;
     public float groundRayLength;
-    public float shootingForce;
+    public float shootingForceGround;
+    public float shootingForceAir;
     public float deceleration;
     public float acceleration;
-    public float maxSpeed;
+    public float movementSpeed;
     public float jumpForce;
     public GameObject gunObject;
+    public GameObject bullet;
 
     private void Awake()
     {
-        _shotgun = new Gun(10, 10, 10, 10);
+        _shotgun = new Gun(10, 10, 10, 50);
         _gunInHand = _shotgun;
         
         _gunSprite = gunObject.GetComponentInChildren<SpriteRenderer>();
@@ -33,35 +40,71 @@ public class PlayerMovement : MonoBehaviour
         _playerInputActions.Enable();
         //_playerInputActions.Player.Jump.performed += _ => Jump();
         _playerInputActions.Player.Shoot.performed += _ => Shoot();
-        
+
+        _canShoot = true;
     }
     void Update()
     {   
         LookatMouse();
+        var velocity = _rb.velocity;
+        if (Math.Abs(velocity.x) > maxPlayerSpeedX)
+        {
+            _rb.velocity = new Vector2(velocity.normalized.x * maxPlayerSpeedX,velocity.y);
+        }
+
+        if (Math.Abs(velocity.y)> maxPlayerSpeedY)
+        {
+            _rb.velocity = new Vector2(velocity.x, velocity.normalized.y * maxPlayerSpeedY);
+        }
         //MovePlayer();
     }
 
     private void FixedUpdate()
     {
         var position = transform.position;
-        var hit = Physics2D.Raycast(position, Vector2.down, groundRayLength, ~_mask);
+        var hit = Physics2D.Raycast(position, Vector2.down, groundRayLength, LayerMask.GetMask("Floor"));
         if (hit)
         {
+            _shootingforce = shootingForceGround;
             var velocity = _rb.velocity;
             if (math.abs(velocity.x) > 0.1)
             {
                 velocity.x -= deceleration * velocity.normalized.x;
                 _rb.velocity = velocity;
             }
+            
+        }
+        else
+        {
+            _shootingforce = shootingForceAir;
         }
        
         Debug.DrawLine(position, position +Vector3.down * groundRayLength);
+        Debug.DrawLine(gunObject.transform.position, gunObject.transform.position +10*_aimDirection,Color.red);
     }
 
     private void Shoot()
     {
-        _rb.AddForce(-_aimDirection * shootingForce, ForceMode2D.Impulse);
-        _shotgun.Shoot(bullet, gunObject.transform.position + gunObject.transform.right * 0.75f ,_angle);
+        if (_canShoot)
+        {
+            var gunPosition = gunObject.transform.position;
+            var hit = Physics2D.Raycast(gunPosition, _aimDirection, groundRayLength, ~LayerMask.GetMask("Player"));
+           
+            if (hit && hit.collider.gameObject.CompareTag("JumpPad"))
+            {
+                var jumpPad = hit.collider.gameObject;
+                if (hit.distance < effectiveJumpPadDistance)
+                {
+                    var jumpPadForce = jumpPad.GetComponent<JumpPadScript>().jumpBoostFactor;
+                    _shootingforce *= jumpPadForce;
+                }
+            }
+            Debug.Log(_shootingforce);
+            _rb.velocity = new Vector2(_rb.velocity.x, 0);
+            _rb.AddForce(-_aimDirection * _shootingforce, ForceMode2D.Impulse);
+            _shotgun.Shoot(bullet, gunPosition + gunObject.transform.right * 0.75f ,_angle);
+            StartCoroutine(StopShooting());
+        }
     }
 
     private void Jump()
@@ -90,12 +133,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (Math.Abs(_rb.velocity.x) <= maxSpeed)
+        if (Math.Abs(_rb.velocity.x) <= movementSpeed)
         {
             var movementValue = _playerInputActions.Player.HorizontalMovement.ReadValue<float>();
             var velocity = _rb.velocity.x;
             velocity += acceleration * Time.deltaTime * movementValue * 10;
             _rb.velocity = new Vector2(velocity, _rb.velocity.y);
         }
+    }
+
+    IEnumerator StopShooting()
+    {
+        _canShoot = false;
+        yield return new WaitForSeconds(timeBetweenShots);
+        _canShoot = true;
     }
 }

@@ -22,7 +22,6 @@ public class BulletScript : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log((transform.position-_startposition).magnitude+ " " + range);
         if ((transform.position-_startposition).magnitude > range)
         {
             Destroy(this.gameObject);
