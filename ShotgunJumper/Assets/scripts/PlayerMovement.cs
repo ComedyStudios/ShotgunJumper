@@ -8,13 +8,18 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private PlayerInputActions _playerInputActions;
     private SpriteRenderer _gunSprite;
-    private Vector3 _aimDirection;
+    private Vector2 _aimDirection;
     private Gun _shotgun;
     private Gun _gunInHand;
     private float _angle;
     private bool _canShoot;
     private float _shootingforce;
 
+    private float movementSpeed;
+    private float jumpForce;
+    private float acceleration;
+
+    public float hp;
     public float timeBetweenShots;
     public float effectiveJumpPadDistance;
     public float maxPlayerSpeedX;
@@ -23,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
     public float shootingForceGround;
     public float shootingForceAir;
     public float deceleration;
-    public float acceleration;
-    public float movementSpeed;
-    public float jumpForce;
+    
+    
+    
     public GameObject gunObject;
     public GameObject bullet;
 
@@ -45,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {   
-        LookatMouse();
+        LookAtMouse();
         var velocity = _rb.velocity;
         if (Math.Abs(velocity.x) > maxPlayerSpeedX)
         {
@@ -80,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         }
        
         Debug.DrawLine(position, position +Vector3.down * groundRayLength);
-        Debug.DrawLine(gunObject.transform.position, gunObject.transform.position +10*_aimDirection,Color.red);
+        Debug.DrawLine(gunObject.transform.position, gunObject.transform.position + 10* new Vector3(_aimDirection.x, _aimDirection.y, 0),Color.red);
     }
 
     private void Shoot()
@@ -99,9 +104,9 @@ public class PlayerMovement : MonoBehaviour
                     _shootingforce *= jumpPadForce;
                 }
             }
-            Debug.Log(_shootingforce);
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
-            _rb.AddForce(-_aimDirection * _shootingforce, ForceMode2D.Impulse);
+            Debug.Log((-_aimDirection.normalized * _shootingforce).magnitude);
+            _rb.AddForce(-_aimDirection.normalized * _shootingforce, ForceMode2D.Impulse);
             _shotgun.Shoot(bullet, gunPosition + gunObject.transform.right * 0.75f ,_angle);
             StartCoroutine(StopShooting());
         }
@@ -112,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
     }
 
-    private void LookatMouse()
+    private void LookAtMouse()
     {
         var gunTransform = gunObject.transform;
         if (gunTransform.eulerAngles.z > 90 && gunTransform.eulerAngles.z < 270 )
@@ -124,8 +129,12 @@ public class PlayerMovement : MonoBehaviour
             _gunSprite.flipY = false;
         }
         var positionOnScreen = _playerInputActions.Player.ScreenPosition.ReadValue<Vector2>();
-        var positionInWorld = Camera.main.ScreenToWorldPoint(positionOnScreen);
-        _aimDirection = (positionInWorld - transform.position).normalized;
+        if (Camera.main != null)
+        {
+            var positionInWorld = Camera.main.ScreenToWorldPoint(positionOnScreen);
+            _aimDirection = (positionInWorld - transform.position).normalized;
+        }
+
         _angle = Mathf.Atan2(_aimDirection.y, _aimDirection.x) * Mathf.Rad2Deg;
         gunObject.transform.eulerAngles = new Vector3(0, 0, _angle);
 

@@ -27,4 +27,14 @@ public class BulletScript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("destroy1");
+        if (!collision.gameObject.transform.CompareTag("Enemy"))
+        {
+            Debug.Log("destroy");
+            Destroy(this.gameObject);
+        }
+    }
 }
