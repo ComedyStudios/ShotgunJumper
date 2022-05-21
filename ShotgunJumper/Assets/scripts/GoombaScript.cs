@@ -22,6 +22,9 @@ public class GoombaScript : MonoBehaviour
     void Update()
     {
         MoveGoomba();
+        void CheckForSteps()
+        {
+        }
     }
 
     void MoveGoomba()

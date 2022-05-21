@@ -104,11 +104,15 @@ public class PlayerMovement : MonoBehaviour
                     _shootingforce *= jumpPadForce;
                 }
             }
+
+            var tempDeceleration = deceleration;
+            deceleration = 0;
             _rb.velocity = new Vector2(_rb.velocity.x, 0);
             Debug.Log((-_aimDirection.normalized * _shootingforce).magnitude);
             _rb.AddForce(-_aimDirection.normalized * _shootingforce, ForceMode2D.Impulse);
             _shotgun.Shoot(bullet, gunPosition + gunObject.transform.right * 0.75f ,_angle);
             StartCoroutine(StopShooting());
+            deceleration = tempDeceleration;
         }
     }
 
