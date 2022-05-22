@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         var movementVector = walkAction.ReadValue<Vector2>();
-        this.transform.Translate(new Vector3(movementVector.x, movementVector.y, 0) * speed * Time.deltaTime);
+        this.transform.Translate(  speed * Time.deltaTime * new Vector3(movementVector.x, movementVector.y, 0));
     }
 
     public void MovePlayer(InputAction.CallbackContext context)
