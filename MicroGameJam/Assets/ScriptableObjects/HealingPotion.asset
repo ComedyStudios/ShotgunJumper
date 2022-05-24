@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: HealingPotion
   m_EditorClassIdentifier: 
   id: 0
-  name: HealingPotion
+  name: asdawdawd
   lifeTime: 100
-  icon: {fileID: 21300000, guid: 79ee011e3d6d0ba4eb8337232ce2d86d, type: 3}
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

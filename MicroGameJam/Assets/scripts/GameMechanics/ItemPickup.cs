@@ -1,19 +1,21 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
-namespace DefaultNamespace
+namespace MiniGameJam
 {
     public class ItemPickup: MonoBehaviour
     {
         public Item item;
         
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
             var o = collision.gameObject;
-            if (o.CompareTag("Player"))
+            if (o.CompareTag("Player") && Inventory.Instance.inventorySize > Inventory.Instance.inventory.Count)
             {
                 Inventory.Instance.Add(item);
                 Destroy(gameObject);
             }
         }
+        
     }
 }
