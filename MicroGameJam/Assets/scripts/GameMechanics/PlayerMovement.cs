@@ -6,10 +6,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static GameObject Player;
+    
     public float speed;
     public InputAction walkAction;
 
-    // Start is called before the first frame update
+    private void Start()
+    {
+        Player = this.gameObject;
+    }
+
     private void OnEnable()
     {
         walkAction.Enable();
@@ -27,12 +33,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var dir = (Vector3)Mouse.current.position.ReadValue() - Camera.main.WorldToScreenPoint(transform.position);
+        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         var movementVector = walkAction.ReadValue<Vector2>();
-        this.transform.Translate(  speed * Time.deltaTime * new Vector3(movementVector.x, movementVector.y, 0));
+        this.transform.Translate(  speed * Time.deltaTime * new Vector3(movementVector.x, movementVector.y, 0), Space.World);
     }
-
-    public void MovePlayer(InputAction.CallbackContext context)
-    {
-        
-    }
+    
 }

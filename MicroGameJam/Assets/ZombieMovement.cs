@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class ZombieMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float health;
+    public float speed;
+    public float minDistanceToPlayer;
+    public float maxDistanceToPlayer;
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        
+        var direction = PlayerMovement.Player.transform.position - transform.position;
+        if (direction.magnitude > minDistanceToPlayer && direction.magnitude < maxDistanceToPlayer)
+        {
+            transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);
+        }
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }
