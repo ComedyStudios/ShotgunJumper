@@ -3,25 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Slider = UnityEngine.UI.Slider;
 
 public class PlayerState : MonoBehaviour
 {
-   public float maxHelth;
-   public float health;
-   public float healthReduction;
+   public static PlayerState Instance;
+   public int maxHealth;
+   
+   public int healthReduction;
    public TextMeshProUGUI text;
    public GameObject healthBar; 
-   private float time;
    private Slider _slider;
    
+   [HideInInspector]
+   public int health;
+   
+   private float _time;
+
    
    private void Start()
    {
-      health = maxHelth;
-      time = Time.time;
+      Instance = this;
+      health = maxHealth;
+      _time = Time.time;
       _slider = healthBar.GetComponent<UnityEngine.UI.Slider>();
 
    }
@@ -29,10 +36,10 @@ public class PlayerState : MonoBehaviour
    void Update()
    {
       text.text = health.ToString();
-      _slider.value = health / maxHelth;
-      if (Time.time - time >= Constants.Tick)
+      _slider.value = (float)health / (float)maxHealth;
+      if (Time.time - _time >= Constants.Tick)
       {
-         time = Time.time;
+         _time = Time.time;
          health -= healthReduction;
       }
       if (health <= 0)
