@@ -4,41 +4,45 @@ using System.Collections.Generic;
 using MiniGameJam;
 using UnityEngine;
 
-public class ZombieMovement : MonoBehaviour
+namespace Enemies
 {
-    public float speed;
-    public float minDistanceToPlayer;
-    public float maxDistanceToPlayer;
-    public float hitRate;
-
-    private int _damage;
-    private float _lastHitTime;
-    private EnemyState _state;
-
-    private void Start()
+    public class ZombieMovement : MonoBehaviour
     {
-        _state = GetComponent<EnemyState>();
-        _damage = _state.damage;
-    }
+        public float speed;
+        public float minDistanceToPlayer;
+        public float maxDistanceToPlayer;
+        public float hitRate;
 
-    void Update() 
-    {
-        var direction = PlayerMovement.Player.transform.position - transform.position;
-        if (direction.magnitude > minDistanceToPlayer && direction.magnitude < maxDistanceToPlayer)
+        private int _damage;
+        private float _lastHitTime;
+        private EnemyState _state;
+
+        private void Start()
         {
-            transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);
-            _lastHitTime = Time.time;
+            _state = GetComponent<EnemyState>();
+            _damage = _state.damage;
         }
-        else
+
+        void Update() 
         {
-            if (Time.time - _lastHitTime >= 1/hitRate && direction.magnitude < maxDistanceToPlayer)
+            var direction = PlayerMovement.Player.transform.position - transform.position;
+            if (direction.magnitude > minDistanceToPlayer && direction.magnitude < maxDistanceToPlayer)
             {
+                transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);
                 _lastHitTime = Time.time;
-                PlayerState.Instance.health -= _damage;
-                Debug.Log($"{this.name} hit player");
             }
+            else
+            {
+                if (Time.time - _lastHitTime >= 1/hitRate && direction.magnitude < maxDistanceToPlayer)
+                {
+                    _lastHitTime = Time.time;
+                    PlayerState.Instance.health -= _damage;
+                    Debug.Log($"{this.name} hit player");
+                }
+            }
+            var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-    }
+    } 
 }
+    
