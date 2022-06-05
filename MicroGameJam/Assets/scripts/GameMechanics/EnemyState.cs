@@ -11,16 +11,19 @@ namespace MiniGameJam
         [HideInInspector]
         public int currentHealth;
 
+
         private void Start()
         {
             currentHealth = maxHealth;
+           
         }
 
         private void Update()
         {
-            if (currentHealth == 0)
+            if (currentHealth <= 0)
             {
-                //TODO: Kill enemy and drop Stuff
+                ItemManager.Instance.DropRandomItem(transform.position);
+                Destroy(gameObject);
             }
         }
     }

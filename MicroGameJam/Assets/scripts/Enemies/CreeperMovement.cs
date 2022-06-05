@@ -1,4 +1,5 @@
-﻿using MiniGameJam;
+﻿using System.Security.Cryptography;
+using MiniGameJam;
 using UnityEngine;
 
 namespace Enemies
@@ -15,11 +16,13 @@ namespace Enemies
         private int _damage;
         private float _lastChargeTime;
         private EnemyState _state;
+        private SpriteRenderer _renderer;
 
         private void Start()
         {
             _state = GetComponent<EnemyState>();
             _damage = _state.damage;
+            _renderer = GetComponent<SpriteRenderer>();
         }
 
         void Update() 
@@ -32,6 +35,11 @@ namespace Enemies
             if (direction.magnitude > chargeDistance)
             {
                 _lastChargeTime = Time.time;
+                _renderer.color = Color.yellow;
+            }
+            else
+            {
+                _renderer.color = Color.red;
             }
 
             if (Time.time - _lastChargeTime >= chargeTime)
@@ -40,6 +48,7 @@ namespace Enemies
                 var damage = _damage * 1 / (direction.magnitude * damageFallOff);
                 PlayerState.Instance.health -= (int) damage;
                 Debug.Log($"creeper dealt {(int)damage} damage to player");
+                Destroy(gameObject);
             }
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

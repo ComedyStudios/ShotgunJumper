@@ -1,14 +1,14 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
     public GameObject scrollView;
     public InputAction toggleInventoryAction;
+    public String startScene;
 
     public void OnEnable()
     {
@@ -35,5 +35,14 @@ public class ButtonController : MonoBehaviour
         {
             scrollView.SetActive(true);
         }
+    }
+
+    public void TryAgain()
+    {
+        SceneManager.LoadScene(startScene);
+    }
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

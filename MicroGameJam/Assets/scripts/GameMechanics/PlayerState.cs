@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,9 +14,12 @@ public class PlayerState : MonoBehaviour
    
    public int healthReduction;
    public TextMeshProUGUI text;
-   public GameObject healthBar; 
-   private Slider _slider;
+   public GameObject healthBar;
+   public GameObject gameOverCanvas;
+   public GameObject hud;
    
+   private Slider _slider;
+
    [HideInInspector]
    public int health;
    
@@ -44,7 +46,9 @@ public class PlayerState : MonoBehaviour
       }
       if (health <= 0)
       {
-         //TODO: game over
+         hud.SetActive(false);
+         gameOverCanvas.SetActive(true);
+         GetComponent<PlayerMovement>().enabled = false;
       }
    }
 }

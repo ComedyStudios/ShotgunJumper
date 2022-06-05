@@ -37,7 +37,6 @@ namespace Enemies
                 {
                     _lastHitTime = Time.time;
                     PlayerState.Instance.health -= _damage;
-                    Debug.Log($"{this.name} hit player");
                 }
             }
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

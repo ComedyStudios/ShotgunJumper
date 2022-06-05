@@ -1,7 +1,4 @@
-﻿namespace DefaultNamespace
+﻿public static class Constants
 {
-    public class Constants
-    {
-        public static float Tick = 1;
-    }
+    public static float Tick = 1;
 }
