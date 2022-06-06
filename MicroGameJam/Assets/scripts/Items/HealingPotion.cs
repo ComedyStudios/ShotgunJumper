@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
 
-    [CreateAssetMenu(fileName = "New HealingPotion", menuName = "item/create New healing potion")]
+    [CreateAssetMenu(fileName = "New HealingPotion", menuName = "item/Healing potion")]
     public class HealingPotion : Item
     {
-        public float healAmount;
+        public int healAmount;
+
+        public override void UseItem()
+        {
+            PlayerState.Instance.health += healAmount;
+            Debug.Log($"player was healed by {healAmount}");
+        }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MiniGameJam
 {
@@ -7,6 +8,7 @@ namespace MiniGameJam
     {
         public int maxHealth;
         public int damage;
+        public Canvas hpSlider;
         
         [HideInInspector]
         public int currentHealth;
@@ -20,6 +22,8 @@ namespace MiniGameJam
 
         private void Update()
         {
+            hpSlider.GetComponent<Slider>().value = (float)currentHealth / (float)maxHealth;
+            hpSlider.transform.rotation = Quaternion.identity;
             if (currentHealth <= 0)
             {
                 ItemManager.Instance.DropRandomItem(transform.position);

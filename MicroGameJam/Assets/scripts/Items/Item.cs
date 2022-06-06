@@ -6,4 +6,9 @@ public class Item : ScriptableObject
     public string name;
     public float lifeTime;
     public Sprite icon;
+
+    public virtual void UseItem()
+    {
+        Debug.Log("item has been used");
+    }
 }
