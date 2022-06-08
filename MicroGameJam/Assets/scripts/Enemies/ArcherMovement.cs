@@ -17,7 +17,7 @@ namespace Enemies
         private float _lastShotTime;
         private void Update()
         {
-            var direction = PlayerMovement.Player.transform.position - transform.position;
+            var direction = PlayerMovement.player.transform.position - transform.position;
             var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             if (direction.magnitude > stopDistance && direction.magnitude < idleDistance)
             {

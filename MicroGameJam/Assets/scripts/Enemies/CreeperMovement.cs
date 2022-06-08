@@ -27,7 +27,7 @@ namespace Enemies
 
         void Update() 
         {
-            var direction = PlayerMovement.Player.transform.position - transform.position;
+            var direction = PlayerMovement.player.transform.position - transform.position;
             if (direction.magnitude > stopDistance && direction.magnitude < idleDistance)
             {
                 transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);

@@ -14,4 +14,9 @@ public class Weapon: Item
     {
         AttackScript.Instance.SetWeapon(this);
     }
+
+    public virtual void Shoot()
+    {
+        
+    }
 }

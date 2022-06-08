@@ -12,13 +12,14 @@ namespace GameMechanics
         public InputAction attackAction;
         public Weapon currentWeapon;
         public static AttackScript Instance;
+        public float lastHit;
+
         private readonly List<Ray2D> _rays = new List<Ray2D>();
         private float _spread;
         private int _rayCount;
         private float _rayLength;
         private float _hitCooldown;
         private int _damage;
-        private float _lastHit;
 
         public void OnEnable()
         {
@@ -71,9 +72,10 @@ namespace GameMechanics
         private void DoDamage()
         {
             //TODO: works for now maybe Expand later
-            if (Time.time-_lastHit >= _hitCooldown)
+            //TODO: do not hit when changing weapons 
+            if (Time.time-lastHit >= _hitCooldown)
             {
-                _lastHit = Time.time;
+                lastHit = Time.time;
                 List<GameObject> targetsInRange = new List<GameObject>();
                 foreach (var ray in _rays)
                 {

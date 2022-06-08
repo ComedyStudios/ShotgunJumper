@@ -6,14 +6,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static GameObject Player;
+    public static GameObject player;
     
     public float speed;
     public InputAction walkAction;
 
     private void Start()
     {
-        Player = this.gameObject;
+        player = this.gameObject;
     }
 
     private void OnEnable()

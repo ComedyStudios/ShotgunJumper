@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4bf83b68a6f469fb275fcdab02b6496, type: 3}
   m_Name: Fists
   m_EditorClassIdentifier: 
-  name: 
+  name: Fists
   lifeTime: 0
-  icon: {fileID: 0}
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   spread: 3
   rayCount: 20
   rayLength: 3
