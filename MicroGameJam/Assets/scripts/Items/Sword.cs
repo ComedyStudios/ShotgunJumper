@@ -6,8 +6,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "UnnamedSword", menuName = "item/Weapon/Sword")]
 public class Sword: Weapon
 {
+    
+    
     public override void UseWeapon()
     {
+        var anim = AttackScript.Instance.GetComponentInChildren<Animator>();
+        anim.Play("slice",0, 0.0f);
         var rays = new List<Ray2D>();
         for (int i = 0; i< rayCount; i++)
         {
@@ -28,7 +32,6 @@ public class Sword: Weapon
         {
             var state = target.GetComponent<EnemyState>();
             state.currentHealth -= damage;
-            Debug.Log($"{target.name} has been hit, it has {state.currentHealth} health left");
         }
     }
 }
