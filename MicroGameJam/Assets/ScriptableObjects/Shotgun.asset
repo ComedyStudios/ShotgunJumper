@@ -9,14 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4bf83b68a6f469fb275fcdab02b6496, type: 3}
+  m_Script: {fileID: 11500000, guid: aae118a12eee4ede927836854a4d4bff, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
   name: Shotgun
   lifeTime: 0
   icon: {fileID: 0}
-  spread: 7
-  rayCount: 10
-  rayLength: 10
-  hitCooldown: 3
-  damage: 30
+  spread: 20
+  rayCount: 5
+  rayLength: 2
+  hitCooldown: 1
+  damage: 5
+  bulletPrefab: {fileID: 8971284302000972757, guid: 12ae69e7290060f439d83d5863c60fe0, type: 3}
+  bulletSpeed: 30

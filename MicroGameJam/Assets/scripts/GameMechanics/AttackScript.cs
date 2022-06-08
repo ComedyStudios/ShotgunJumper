@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using MiniGameJam;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Utils;
 
 namespace GameMechanics
 {
@@ -24,6 +26,11 @@ namespace GameMechanics
         public void OnEnable()
         {
             attackAction.Enable();
+            _spread = currentWeapon.spread;
+            _rayCount = currentWeapon.rayCount;
+            _rayLength = currentWeapon.rayLength;
+            _hitCooldown = currentWeapon.hitCooldown;
+            _damage = currentWeapon.damage;
         }
 
         public void OnDisable()
@@ -34,19 +41,9 @@ namespace GameMechanics
         private void Start()
         {
             Instance = this;
-            SetWeapon(currentWeapon);
             attackAction.performed += _ => DoDamage();
         }
-
-        public void SetWeapon(Weapon weapon)
-        {
-            _spread = weapon.spread;
-            _rayCount = weapon.rayCount;
-            _rayLength = weapon.rayLength;
-            _hitCooldown = weapon.hitCooldown;
-            _damage = weapon.damage;
-            currentWeapon = weapon;
-        }
+        
 
         public void Update()
         {
@@ -73,26 +70,16 @@ namespace GameMechanics
         {
             //TODO: works for now maybe Expand later
             //TODO: do not hit when changing weapons 
-            if (Time.time-lastHit >= _hitCooldown)
+
+            
+            if (Time.time-lastHit >= currentWeapon.hitCooldown && !CanvasUtils.IsPointerOverUIElement())
             {
+                currentWeapon.UseWeapon();
                 lastHit = Time.time;
-                List<GameObject> targetsInRange = new List<GameObject>();
-                foreach (var ray in _rays)
-                {
-                    RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, _rayLength,~LayerMask.GetMask("Player", "Item"));
-                    if (hit == true && !targetsInRange.Contains(hit.collider.gameObject))
-                    {
-                        targetsInRange.Add(hit.collider.gameObject);
-                    }
-                }
-                foreach (var target in targetsInRange)
-                {
-                    var state = target.GetComponent<EnemyState>();
-                    state.currentHealth -= _damage;
-                    Debug.Log($"{target.name} has been hit, it has {state.currentHealth} health left");
-                }
             }
         }
+        
+        
     
     }
 }

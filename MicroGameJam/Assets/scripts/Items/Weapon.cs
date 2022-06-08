@@ -1,8 +1,7 @@
 ﻿using GameMechanics;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Weapon", menuName = "item/Weapon")]
-public class Weapon: Item
+public abstract class Weapon: Item
 {
     public float spread;
     public int rayCount;
@@ -12,10 +11,10 @@ public class Weapon: Item
 
     public override void UseItem()
     {
-        AttackScript.Instance.SetWeapon(this);
+        AttackScript.Instance.currentWeapon = this;
     }
 
-    public virtual void Shoot()
+    public virtual void UseWeapon()
     {
         
     }

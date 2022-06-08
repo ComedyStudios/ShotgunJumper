@@ -1,4 +1,5 @@
 ﻿using System;
+using MiniGameJam;
 using UnityEngine;
 
 namespace Enemies
@@ -6,11 +7,25 @@ namespace Enemies
     public class BulletScript : MonoBehaviour
     {
         public float damage;
+        public string enemyTag;
+        public float lifeTime;
+
+        private void Start()
+        {
+            Destroy(gameObject, lifeTime);
+        }
+
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.tag == "Player")
+            if (other.CompareTag(enemyTag))
             {
-                PlayerState.Instance.health -= (int)damage;
+
+                if (!other.TryGetComponent(out EnemyState state))
+                {
+                    PlayerState.Instance.health -= (int)damage;
+                }
+                else state.currentHealth -= (int)damage;
+                    
                 Destroy(gameObject);
             }
         }

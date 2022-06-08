@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4312051623532111133}
   - component: {fileID: 1604272728001429590}
   m_Layer: 0
-  m_Name: BulletPrefab
+  m_Name: BulletPrefab 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  enemyTag: Player
+  enemyTag: Enemy
   lifeTime: 20
