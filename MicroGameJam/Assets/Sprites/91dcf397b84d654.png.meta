@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -882,7 +882,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      91dcf397b84d654_15: -320833264
+      91dcf397b84d654_9: -2008370812
       91dcf397b84d654_2: -252601225
       91dcf397b84d654_17: 1254514697
       91dcf397b84d654_14: 882009586
@@ -917,7 +917,7 @@ TextureImporter:
       91dcf397b84d654_27: -1187547581
       91dcf397b84d654_19: -602852818
       91dcf397b84d654_28: -1221091708
-      91dcf397b84d654_9: -2008370812
+      91dcf397b84d654_15: -320833264
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
