@@ -43,12 +43,13 @@ public class ItemManager: MonoBehaviour
             randomNumber -= items[i].weight;
         }
     }
-    
-    public void DropItem(Item item, Vector3 position)
+
+    public void DropSetItem(Item item, Vector3 position)
     {
-        
+        var obj = Instantiate(itemPrefab, position, Quaternion.identity);
+        obj.GetComponent<ItemPickup>().item = item;
     }
-    
+
     public List<DropRates> SortArray(List<DropRates> array, int leftIndex, int rightIndex)
     {
         //TODO: FIX this
