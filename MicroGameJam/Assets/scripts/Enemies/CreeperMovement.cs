@@ -27,7 +27,7 @@ namespace Enemies
             Move();
             
             //reset charge
-            if (Direction.magnitude > chargeDistance)
+            if (DistanceToPlayer() > chargeDistance)
             {
                 _lastChargeTime = Time.time;
                 _renderer.color = Color.yellow;
@@ -46,7 +46,7 @@ namespace Enemies
         {
             if (Time.time - _lastChargeTime >= chargeTime)
             {
-                var damage = base.Damage * 1 / (Direction.magnitude * damageFallOff);
+                var damage = base.Damage * 1 / (DistanceToPlayer() * damageFallOff);
                 PlayerState.Instance.health -= (int)base.Damage;
                 Debug.Log($"creeper dealt {(int)base.Damage} damage to player");
                 Destroy(gameObject);

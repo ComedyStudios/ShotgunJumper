@@ -23,6 +23,7 @@ namespace Enemies
 
         private void Attack()
         {
+            
             var angle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg;
             if (Time.time - LastShotTime >= hitCooldown)
             {

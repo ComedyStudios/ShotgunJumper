@@ -21,7 +21,7 @@ namespace Enemies
         {
             Move();
             
-            if (Time.time - _lastHitTime >= 1/hitRate && Direction.magnitude <= stopDistance)
+            if (Time.time - _lastHitTime >= 1/hitRate && DistanceToPlayer() <= stopDistance)
             {
                 _lastHitTime = Time.time;
                 PlayerState.Instance.health -= (int)Damage;
