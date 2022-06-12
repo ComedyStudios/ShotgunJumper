@@ -4,16 +4,12 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class CreeperMovement : MonoBehaviour
+    public class CreeperMovement : Enemy
     {
-        public float speed;
-        public float idleDistance;
         public float chargeDistance;
-        public float stopDistance;
         public float chargeTime;
         public float damageFallOff;
         
-        private int _damage;
         private float _lastChargeTime;
         private EnemyState _state;
         private SpriteRenderer _renderer;
@@ -21,33 +17,38 @@ namespace Enemies
         private void Start()
         {
             _state = GetComponent<EnemyState>();
-            _damage = _state.damage;
+            Damage = _state.damage;
             _renderer = GetComponent<SpriteRenderer>();
+            SetUpPathfinding();
         }
 
         void Update() 
         {
-            var direction = PlayerMovement.player.transform.position - transform.position;
-            if (direction.magnitude > stopDistance && direction.magnitude < idleDistance)
-            {
-                transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);
-            }
-            if (direction.magnitude > chargeDistance)
+            Move();
+            
+            //reset charge
+            if (Direction.magnitude > chargeDistance)
             {
                 _lastChargeTime = Time.time;
                 _renderer.color = Color.yellow;
             }
+            //start charging 
             else
             {
                 _renderer.color = Color.red;
             }
+            
+            
+            Attack();
+        }
 
+        private void Attack()
+        {
             if (Time.time - _lastChargeTime >= chargeTime)
             {
-                //TODO: make the creeper die afther exlopsion ergo it only hits the player once
-                var damage = _damage * 1 / (direction.magnitude * damageFallOff);
-                PlayerState.Instance.health -= (int) damage;
-                Debug.Log($"creeper dealt {(int)damage} damage to player");
+                var damage = base.Damage * 1 / (Direction.magnitude * damageFallOff);
+                PlayerState.Instance.health -= (int)base.Damage;
+                Debug.Log($"creeper dealt {(int)base.Damage} damage to player");
                 Destroy(gameObject);
             }
         }

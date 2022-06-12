@@ -13,16 +13,17 @@ namespace MiniGameJam
         [HideInInspector]
         public int currentHealth;
 
+        private Slider _sliderReference;
 
         private void Start()
         {
             currentHealth = maxHealth;
-           
+            _sliderReference = hpSlider.GetComponent<Slider>();
         }
 
         private void Update()
         {
-            hpSlider.GetComponent<Slider>().value = (float)currentHealth / (float)maxHealth;
+            _sliderReference.value = (float)currentHealth / (float)maxHealth;
             hpSlider.transform.rotation = Quaternion.identity;
             if (currentHealth <= 0)
             {

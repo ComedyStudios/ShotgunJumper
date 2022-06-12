@@ -1,43 +1,49 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+namespace GameMechanics
 {
-    public static GameObject player;
+    public class PlayerMovement : MonoBehaviour
+    {
+        public static GameObject Player;
     
-    public float speed;
-    public InputAction walkAction;
+        public float speed;
+        public InputAction walkAction;
 
-    private void Start()
-    {
-        player = this.gameObject;
-    }
+        private Rigidbody2D _rb;
 
-    private void OnEnable()
-    {
-        walkAction.Enable();
-    }
+        private void Start()
+        {
+            Player = gameObject;
+            _rb = GetComponent<Rigidbody2D>();
+        }
 
-    private void OnDisable()
-    {
-        walkAction.Disable();
-    }
+        private void OnEnable()
+        {
+            walkAction.Enable();
+        }
 
-    private void Awake()
-    {
-    }
+        private void OnDisable()
+        {
+            walkAction.Disable();
+        }
+        void Update()
+        {
+           
+            
+            //transform.Translate(  speed * Time.deltaTime * new Vector3(movementVector.x, movementVector.y, 0), Space.World);
+            
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        var dir = (Vector3)Mouse.current.position.ReadValue() - Camera.main.WorldToScreenPoint(transform.position);
-        var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        var movementVector = walkAction.ReadValue<Vector2>();
-        this.transform.Translate(  speed * Time.deltaTime * new Vector3(movementVector.x, movementVector.y, 0), Space.World);
+        private void FixedUpdate()
+        {
+            var dir = (Vector3)Mouse.current.position.ReadValue() - Camera.main.WorldToScreenPoint(transform.position);
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            var movementVector = walkAction.ReadValue<Vector2>();
+
+            _rb.velocity = movementVector * speed;
+        }
     }
-    
 }

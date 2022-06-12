@@ -28,6 +28,10 @@ namespace Enemies
                     
                 Destroy(gameObject);
             }
+            else if (other.gameObject.layer == LayerMask.NameToLayer("Map"))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

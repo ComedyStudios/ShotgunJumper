@@ -1,44 +1,32 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using MiniGameJam;
 using UnityEngine;
 
 namespace Enemies
 {
-    public class ZombieMovement : MonoBehaviour
+    public class ZombieMovement : Enemy
     {
-        public float speed;
-        public float minDistanceToPlayer;
-        public float maxDistanceToPlayer;
         public float hitRate;
-
-        private int _damage;
+        
         private float _lastHitTime;
         private EnemyState _state;
 
         private void Start()
         {
             _state = GetComponent<EnemyState>();
-            _damage = _state.damage;
+            Damage = _state.damage;
+            SetUpPathfinding();
         }
 
         void Update() 
         {
-            var direction = PlayerMovement.player.transform.position - transform.position;
-            if (direction.magnitude > minDistanceToPlayer && direction.magnitude < maxDistanceToPlayer)
+            Move();
+            
+            if (Time.time - _lastHitTime >= 1/hitRate && Direction.magnitude <= stopDistance)
             {
-                transform.Translate(direction.normalized * (speed * Time.deltaTime), Space.World);
                 _lastHitTime = Time.time;
+                PlayerState.Instance.health -= (int)Damage;
             }
-            else
-            {
-                if (Time.time - _lastHitTime >= 1/hitRate && direction.magnitude < maxDistanceToPlayer)
-                {
-                    _lastHitTime = Time.time;
-                    PlayerState.Instance.health -= _damage;
-                }
-            }
+            
         }
     } 
 }
