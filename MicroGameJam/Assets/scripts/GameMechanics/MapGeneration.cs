@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,36 +20,95 @@ namespace GameMechanics
 
         private void Start()
         {
-            //InvokeRepeating(nameof(SetTiles), 0f, 1f);
-            GenerateDungeon();
+            CreateMap();
         }
 
-        private void SetTiles()
+        private void CreateMap()
+        {
+            mainTilemap.ClearAllTiles();
+            var dungeon = GenerateDungeon();
+            Vector3Int start;
+            for (int i = 0; i < dungeon.GetLength(0); i++)
+            {
+                for (int j = 0; j < dungeon.GetLength(1); j++)
+                {
+                    if (dungeon[i, j] != 0)
+                    {
+                        SetTiles(new Vector3Int(j * 30, -i * 30));
+                        if (dungeon[i, j] == 1)
+                        {
+                            start = new Vector3Int(j * 30, -i * 30);
+                            var position = mainTilemap.GetComponentInParent<Grid>().GetCellCenterWorld(start);
+                            AttackScript.Instance.transform.position = position + new Vector3(-3, 3);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void SetTiles(Vector3Int location)
         {
             var map = Random.Range(0, tilemaps.Count-1);
-            mainTilemap.ClearAllTiles();
             for (int i = 0; i < rooms; i++)
             {
-                var location = new Vector3Int(0,0);
                 tilemaps[map].CompressBounds();
                 var tilesArray = tilemaps[map].GetTilesBlock(tilemaps[map].cellBounds);
                 mainTilemap.SetTilesBlock(new BoundsInt(location, tilemaps[map].size), tilesArray);
             }
         }
 
-        private void GenerateDungeon()
+        private int[,] GenerateDungeon()
         {
-            int[,] dungeon = new int[4, 4];
-
-            var startTile = new Vector2(Random.Range(1, dungeon.GetLength(0)), Random.Range(1, dungeon.GetLength(0)));
-            /*for (int x = 0;x<dungeon.GetLength(0);x++)
+            int[,] dungeon = new int[8, 8];
+            List<Vector2Int> directions = new List<Vector2Int> { Vector2Int.up,Vector2Int.down,Vector2Int.left, Vector2Int.right};
+            var newPosition = new Vector2Int(Random.Range(1, dungeon.GetLength(1)), Random.Range(1, dungeon.GetLength(0)));
+            dungeon[newPosition.y, newPosition.x] = 1;
+            var possibleDirections = new List<Vector2Int>(directions);
+            Vector2Int direction = Vector2Int.zero;
+            try
             {
-                for (int y = 0; y<dungeon.GetLength(1);y++ )
+                for (int i = 1; i < rooms; i++)
                 {
-                    dungeon[x, y] = Random.Range(0, 2);
+                
+                    foreach (var dir in possibleDirections.ToList())
+                    {
+                        
+                        if (newPosition.x + dir.x< 0 || newPosition.x + dir.x ==dungeon.GetLength(1) ||newPosition.y + dir.y < 0 || newPosition.y + dir.y == dungeon.GetLength(0))
+                        {
+                            possibleDirections.Remove(dir);
+                            continue;
+                        }
+                    
+                        if (dungeon[newPosition.y + dir.y, newPosition.x + dir.x] != 0)
+                        {
+                            possibleDirections.Remove(dir);
+                        }
+                    }
+                    if (possibleDirections.Count == 0)
+                    {
+                        break;
+                    }
+                    direction = possibleDirections[Random.Range(0, possibleDirections.Count)];
+                    newPosition += direction;
+                    dungeon[newPosition.y, newPosition.x] = i + 1;
+                    possibleDirections = new List<Vector2Int>(directions);
+                    possibleDirections.Remove(-1*direction);
                 }
-            }*/
+            }
+            catch (Exception e)
+            {
+                Debug.Log($"{newPosition} {direction} {e}");
+                var text = "";
+                foreach (var dir in possibleDirections)
+                {
+                    text += $" {dir}";
+                }
+
+                Debug.Log(text);
+            }
             PrintArray(dungeon);
+            return dungeon;
+
         }
 
         private void PrintArray(int[,] floorMapArray)

@@ -5308,7 +5308,7 @@ MonoBehaviour:
   tilemaps:
   - {fileID: 4854375795955179606, guid: df23be514cd89d94da5ec6c894f34e2d, type: 3}
   conectors: []
-  rooms: 1
+  rooms: 12
 --- !u!4 &1898843409
 Transform:
   m_ObjectHideFlags: 0
