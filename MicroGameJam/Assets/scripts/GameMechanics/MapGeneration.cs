@@ -18,15 +18,21 @@ namespace GameMechanics
         public List<Tilemap> conectors;
         public int rooms;
 
+        private Vector3[,] RoomCenter;
+
         private void Start()
         {
-            CreateMap();
+            
+            
+           CreateMap();
         }
 
         private void CreateMap()
         {
             mainTilemap.ClearAllTiles();
             var dungeon = GenerateDungeon();
+            RoomCenter = new Vector3[dungeon.GetLength(0), dungeon.GetLength(1)];
+            
             Vector3Int start;
             for (int i = 0; i < dungeon.GetLength(0); i++)
             {
@@ -34,26 +40,30 @@ namespace GameMechanics
                 {
                     if (dungeon[i, j] != 0)
                     {
-                        SetTiles(new Vector3Int(j * 30, -i * 30));
+                        SetTiles(j, i);
                         if (dungeon[i, j] == 1)
                         {
                             start = new Vector3Int(j * 30, -i * 30);
                             var position = mainTilemap.GetComponentInParent<Grid>().GetCellCenterWorld(start);
-                            AttackScript.Instance.transform.position = position + new Vector3(-3, 3);
+                            AttackScript.Instance.transform.position = RoomCenter[i,j];
                         }
                     }
                 }
             }
         }
 
-        private void SetTiles(Vector3Int location)
+        private void SetTiles( int x, int y )
         {
-            var map = Random.Range(0, tilemaps.Count-1);
+            var map = Random.Range(0, tilemaps.Count);
             for (int i = 0; i < rooms; i++)
             {
+                var location = new Vector3Int(x * 30, y * -30);
+                
                 tilemaps[map].CompressBounds();
                 var tilesArray = tilemaps[map].GetTilesBlock(tilemaps[map].cellBounds);
                 mainTilemap.SetTilesBlock(new BoundsInt(location, tilemaps[map].size), tilesArray);
+                Debug.Log(tilemaps[map].size);
+                RoomCenter[y, x] = location + tilemaps[map].size/2 ;
             }
         }
 
@@ -65,9 +75,7 @@ namespace GameMechanics
             dungeon[newPosition.y, newPosition.x] = 1;
             var possibleDirections = new List<Vector2Int>(directions);
             Vector2Int direction = Vector2Int.zero;
-            try
-            {
-                for (int i = 1; i < rooms; i++)
+            for (int i = 1; i < rooms; i++)
                 {
                 
                     foreach (var dir in possibleDirections.ToList())
@@ -94,19 +102,7 @@ namespace GameMechanics
                     possibleDirections = new List<Vector2Int>(directions);
                     possibleDirections.Remove(-1*direction);
                 }
-            }
-            catch (Exception e)
-            {
-                Debug.Log($"{newPosition} {direction} {e}");
-                var text = "";
-                foreach (var dir in possibleDirections)
-                {
-                    text += $" {dir}";
-                }
-
-                Debug.Log(text);
-            }
-            PrintArray(dungeon);
+                PrintArray(dungeon);
             return dungeon;
 
         }
