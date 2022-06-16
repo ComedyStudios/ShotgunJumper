@@ -15,37 +15,68 @@ namespace GameMechanics
     {
         public Tilemap mainTilemap ;
         public List<Tilemap> tilemaps;
-        public List<Tilemap> conectors;
+        public RuleTile tile;
         public int rooms;
 
         private Vector3[,] RoomCenter;
+        private int[,] _dungeon;
 
         private void Start()
         {
-            
-            
-           CreateMap();
+            CreateMap();
         }
 
         private void CreateMap()
         {
             mainTilemap.ClearAllTiles();
-            var dungeon = GenerateDungeon();
-            RoomCenter = new Vector3[dungeon.GetLength(0), dungeon.GetLength(1)];
+            _dungeon = GenerateDungeon();
+            RoomCenter = new Vector3[_dungeon.GetLength(0), _dungeon.GetLength(1)];
             
             Vector3Int start;
-            for (int i = 0; i < dungeon.GetLength(0); i++)
+            for (int i = 0; i < _dungeon.GetLength(0); i++)
             {
-                for (int j = 0; j < dungeon.GetLength(1); j++)
+                for (int j = 0; j < _dungeon.GetLength(1); j++)
                 {
-                    if (dungeon[i, j] != 0)
+                    if (_dungeon[i, j] != 0)
                     {
                         SetTiles(j, i);
-                        if (dungeon[i, j] == 1)
+                        if (_dungeon[i, j] == 1)
                         {
                             start = new Vector3Int(j * 30, -i * 30);
                             var position = mainTilemap.GetComponentInParent<Grid>().GetCellCenterWorld(start);
                             AttackScript.Instance.transform.position = RoomCenter[i,j];
+                        }
+                    }
+                }
+            }
+            ConnectRooms();
+        }
+
+        private void ConnectRooms()
+        {
+            List<Tuple<int, int>> connection = new List<Tuple<int, int>>();
+            for (int t = 1; t< rooms; t++)
+            {
+                var room1 = FindRoom(t);
+                var room2 = FindRoom(t+1);
+                
+                if (room1 != null && room2 != null)
+                {
+                    Debug.Log(RoomCenter[room2.Value.y, room2.Value.x] +" "+ RoomCenter[room1.Value.y, room1.Value.x]);
+                    var direction = RoomCenter[room2.Value.y, room2.Value.x] - RoomCenter[room1.Value.y, room1.Value.x];
+                    for (int j = -2; j<2; j++)
+                    {
+                        for (int i = 0; i< Math.Abs(direction.x); i++)
+                        {
+                            mainTilemap.SetTile(Vector3Int.FloorToInt(RoomCenter[room1.Value.y, room1.Value.x])+ new Vector3Int(i * (int)(direction.x/Math.Abs(direction.x)),j ), tile);
+                        }
+                    }
+
+                    for (int j = -1; j<2; j++)
+                    {
+                        for (int i = 0; i<Math.Abs(direction.y);i++)
+                        {
+                            mainTilemap.SetTile(Vector3Int.FloorToInt(RoomCenter[room2.Value.y, room2.Value.x] - new Vector3(j,i* (int)(direction.y/Math.Abs(direction.y)))),tile);
                         }
                     }
                 }
@@ -62,7 +93,6 @@ namespace GameMechanics
                 tilemaps[map].CompressBounds();
                 var tilesArray = tilemaps[map].GetTilesBlock(tilemaps[map].cellBounds);
                 mainTilemap.SetTilesBlock(new BoundsInt(location, tilemaps[map].size), tilesArray);
-                Debug.Log(tilemaps[map].size);
                 RoomCenter[y, x] = location + tilemaps[map].size/2 ;
             }
         }
@@ -75,36 +105,52 @@ namespace GameMechanics
             dungeon[newPosition.y, newPosition.x] = 1;
             var possibleDirections = new List<Vector2Int>(directions);
             Vector2Int direction = Vector2Int.zero;
+            var roomsCreated = 0;
             for (int i = 1; i < rooms; i++)
+            {
+                foreach (var dir in possibleDirections.ToList())
                 {
-                
-                    foreach (var dir in possibleDirections.ToList())
-                    {
-                        
-                        if (newPosition.x + dir.x< 0 || newPosition.x + dir.x ==dungeon.GetLength(1) ||newPosition.y + dir.y < 0 || newPosition.y + dir.y == dungeon.GetLength(0))
-                        {
-                            possibleDirections.Remove(dir);
-                            continue;
-                        }
                     
-                        if (dungeon[newPosition.y + dir.y, newPosition.x + dir.x] != 0)
-                        {
-                            possibleDirections.Remove(dir);
-                        }
-                    }
-                    if (possibleDirections.Count == 0)
+                    if (newPosition.x + dir.x< 0 || newPosition.x + dir.x ==dungeon.GetLength(1) ||newPosition.y + dir.y < 0 || newPosition.y + dir.y == dungeon.GetLength(0))
                     {
-                        break;
+                        possibleDirections.Remove(dir);
+                        continue;
                     }
-                    direction = possibleDirections[Random.Range(0, possibleDirections.Count)];
-                    newPosition += direction;
-                    dungeon[newPosition.y, newPosition.x] = i + 1;
-                    possibleDirections = new List<Vector2Int>(directions);
-                    possibleDirections.Remove(-1*direction);
+                
+                    if (dungeon[newPosition.y + dir.y, newPosition.x + dir.x] != 0)
+                    {
+                        possibleDirections.Remove(dir);
+                    }
                 }
-                PrintArray(dungeon);
+                if (possibleDirections.Count == 0)
+                {
+                    break;
+                }
+                direction = possibleDirections[Random.Range(0, possibleDirections.Count)];
+                newPosition += direction;
+                dungeon[newPosition.y, newPosition.x] = i + 1;
+                roomsCreated = i + 1;
+                possibleDirections = new List<Vector2Int>(directions);
+                possibleDirections.Remove(-1*direction);
+            }
+            PrintArray(dungeon);
+            rooms = roomsCreated;
             return dungeon;
+        }
 
+        private Vector2Int? FindRoom(int room)
+        {
+            for(int i=0; i< _dungeon.GetLength(0); i++)
+            {
+                for(int j=0; j<_dungeon.GetLength(1); j++)
+                {
+                    if (_dungeon[i,j] == room)
+                    {
+                        return new Vector2Int(j, i );
+                    }   		   
+                }
+            }
+            return null;
         }
 
         private void PrintArray(int[,] floorMapArray)
