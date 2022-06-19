@@ -45,6 +45,7 @@ namespace GameMechanics
                             start = new Vector3Int(j * 30, -i * 30);
                             var position = mainTilemap.GetComponentInParent<Grid>().GetCellCenterWorld(start);
                             AttackScript.Instance.transform.position = RoomCenter[i,j];
+                            Camera.main!.transform.position = AttackScript.Instance.transform.position + Vector3.back;
                         }
                     }
                 }
@@ -62,7 +63,6 @@ namespace GameMechanics
                 
                 if (room1 != null && room2 != null)
                 {
-                    Debug.Log(RoomCenter[room2.Value.y, room2.Value.x] +" "+ RoomCenter[room1.Value.y, room1.Value.x]);
                     var direction = RoomCenter[room2.Value.y, room2.Value.x] - RoomCenter[room1.Value.y, room1.Value.x];
                     for (int j = -2; j<2; j++)
                     {
@@ -86,14 +86,19 @@ namespace GameMechanics
         private void SetTiles( int x, int y )
         {
             var map = Random.Range(0, tilemaps.Count);
+            var location = new Vector3Int(x * 30, y * -30);
             for (int i = 0; i < rooms; i++)
             {
-                var location = new Vector3Int(x * 30, y * -30);
                 
                 tilemaps[map].CompressBounds();
                 var tilesArray = tilemaps[map].GetTilesBlock(tilemaps[map].cellBounds);
                 mainTilemap.SetTilesBlock(new BoundsInt(location, tilemaps[map].size), tilesArray);
                 RoomCenter[y, x] = location + tilemaps[map].size/2 ;
+            }
+            var tileObject = tilemaps[map].gameObject.transform;
+            foreach (Transform child in tileObject)
+            {   
+                Instantiate(child.gameObject,location + child.localPosition - tilemaps[map].origin, Quaternion.identity);
             }
         }
 

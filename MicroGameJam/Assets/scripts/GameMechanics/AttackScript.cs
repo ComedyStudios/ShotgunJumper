@@ -25,12 +25,13 @@ namespace GameMechanics
 
         public void OnEnable()
         {
+            Instance = this;
             attackAction.Enable();
             _spread = currentWeapon.spread;
             _rayCount = currentWeapon.rayCount;
             _rayLength = currentWeapon.rayLength;
             _hitCooldown = currentWeapon.hitCooldown;
-            _damage = currentWeapon.damage;
+            _damage = (int)currentWeapon.damage;
         }
 
         public void OnDisable()
@@ -40,7 +41,7 @@ namespace GameMechanics
 
         private void Start()
         {
-            Instance = this;
+            
             attackAction.performed += _ => DoDamage();
         }
         
@@ -68,9 +69,6 @@ namespace GameMechanics
 
         private void DoDamage()
         {
-            //TODO: works for now maybe Expand later
-            //TODO: do not hit when changing weapons 
-
             
             if (Time.time-lastHit >= currentWeapon.hitCooldown && !CanvasUtils.IsPointerOverUIElement())
             {

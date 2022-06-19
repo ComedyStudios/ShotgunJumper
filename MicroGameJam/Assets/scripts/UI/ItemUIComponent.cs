@@ -1,38 +1,46 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using GameMechanics;
-using MiniGameJam;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Object = UnityEngine.Object;
 
-public class ItemUIComponent : MonoBehaviour
+namespace UI
 {
-    public Item item;
-    public TextMeshProUGUI text;
-    public Image image;
-
-    private Transform _parent;
-    private void Start()
+    public class ItemUIComponent : MonoBehaviour
     {
-        text.text = item.name;
-        image.sprite = item.icon;
-        _parent = transform.parent;
-    }
+        public Item item;
+        public TextMeshProUGUI text;
+        public Image image;
 
-    public void OnElementPressed()
-    {
-        item.UseItem();
-        Inventory.Instance.inventory.Remove(item);
-        var count = Inventory.Instance.inventory.Count;
-        
-        //TODO: fix this
-        for (int i = 1; i<_parent.childCount; i++)
+        private Transform _parent;
+        private void Start()
         {
-            _parent.GetChild(i).localPosition = new Vector3(40 + 80*(i-1 % 4) ,  -50 - 100*(float)Math.Floor((float)(i/5)), 0);
+            text.text = item.name;
+            image.sprite = item.icon;
+            _parent = transform.parent;
         }
-        Destroy(gameObject);
+
+        public void OnElementPressed()
+        {
+            item.UseItem();
+            Inventory.Instance.inventory.Remove(item);
+            var count = Inventory.Instance.inventory.Count;
+            
+            List<Transform> remainingItems = new List<Transform>();
+            foreach (Transform child in _parent)
+            {
+                if (child != this.transform)
+                {
+                    remainingItems.Add(child);
+                }
+            }
+
+            for (int i = 0; i< remainingItems.Count; i++)
+            {
+                remainingItems[i].localPosition = new Vector3(40 + 80*(i % 4) ,  -50 - 100*(float)Math.Floor((float)(i/4)), 0);
+            }
+            Destroy(gameObject);
+        }
     }
 }

@@ -13,8 +13,9 @@ namespace GameMechanics
         public InputAction openChestAction;
         public int randomItemsInChest;
         public List<Item> setItemsInChest;
+        public float minDistanceToChest;
 
-        private ButtonPrompt _buttonPrompt;
+
         private void OnEnable()
         {
             openChestAction.Enable();
@@ -28,22 +29,23 @@ namespace GameMechanics
         private void Start()
         {
             openChestAction.performed += _ => OpenChest();
-            _buttonPrompt = GetComponent<ButtonPrompt>();
         }
 
         private void OpenChest()
         {
-            for (int i = 0; i < randomItemsInChest; i++)
+            if ((AttackScript.Instance.transform.position - transform.position).magnitude < GetComponent<CircleCollider2D>().radius)
             {
-                ItemManager.Instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
-            }
+                for (int i = 0; i < randomItemsInChest; i++)
+                {
+                    ItemManager.Instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle, ItemManager.Instance.ChestItems);
+                }
 
-            foreach (var item in setItemsInChest)
-            {
-                ItemManager.Instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
+                foreach (var item in setItemsInChest)
+                {
+                    ItemManager.Instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
+                }
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
-        
     }
 }

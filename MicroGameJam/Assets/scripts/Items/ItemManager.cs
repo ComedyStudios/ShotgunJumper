@@ -3,26 +3,28 @@ using System.Collections.Generic;
 using MiniGameJam;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 
 public class ItemManager: MonoBehaviour
 {
-    public List<DropRates> items = new List<DropRates>();
+    public List<DropRates> MonsterItems = new List<DropRates>();
+    public List<DropRates> ChestItems = new List<DropRates>();
     public GameObject itemPrefab;
     public static ItemManager Instance; 
     private void Awake()
     {
         Instance = this;
         List<DropRates> sortedArray = new List<DropRates>();
-        if (items.Count > 1)
+        if (MonsterItems.Count > 1)
         {
-            items = SortArray(items, 0, items.Count-1);
+            MonsterItems = SortArray(MonsterItems, 0, MonsterItems.Count-1);
         }
     }
 
     //Drops Random Items at specified location 
-    public void DropRandomItem(Vector3 position)
+    public void DropRandomItem(Vector3 position, List<DropRates> items)
     {
         float sum = 0; 
         foreach (var item in items)
@@ -52,7 +54,6 @@ public class ItemManager: MonoBehaviour
 
     public List<DropRates> SortArray(List<DropRates> array, int leftIndex, int rightIndex)
     {
-        //TODO: FIX this
         var i = leftIndex;
         var j = rightIndex;
         var pivot = array[leftIndex].weight;

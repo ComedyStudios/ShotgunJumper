@@ -27,7 +27,7 @@ namespace MiniGameJam
             hpSlider.transform.rotation = Quaternion.identity;
             if (currentHealth <= 0)
             {
-                ItemManager.Instance.DropRandomItem(transform.position);
+                ItemManager.Instance.DropRandomItem(transform.position, ItemManager.Instance.MonsterItems);
                 Destroy(gameObject);
             }
         }

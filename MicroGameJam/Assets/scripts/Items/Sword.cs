@@ -31,7 +31,7 @@ public class Sword: Weapon
         foreach (var target in targetsInRange)
         {
             var state = target.GetComponent<EnemyState>();
-            state.currentHealth -= damage;
+            state.currentHealth -= (int)damage;
         }
     }
 }

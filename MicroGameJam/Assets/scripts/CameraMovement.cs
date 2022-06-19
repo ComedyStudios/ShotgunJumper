@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameMechanics;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
     public GameObject player;
     public float speed;
+    
 
-    // Update is called once per frame
     void Update()
     {
         var playerPosition = player.transform.position;
