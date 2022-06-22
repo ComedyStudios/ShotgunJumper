@@ -24,6 +24,7 @@ namespace Enemies
 
         protected void SetUpPathfinding()
         {
+            target = GameObject.FindWithTag("Player").transform;
             _seeker = GetComponent<Seeker>();
             _seeker.StartPath(transform.position, target.position, OnPathComplete);
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
@@ -78,10 +79,13 @@ namespace Enemies
         {
             var newDistance = 0f;
             Vector3 lastVector = transform.position;
-            foreach (var vector3 in _path.vectorPath)
+            if (_path != null)
             {
-                newDistance += Vector2.Distance(lastVector, vector3);
-                lastVector = vector3;
+                foreach (var vector3 in _path.vectorPath)
+                {
+                    newDistance += Vector2.Distance(lastVector, vector3);
+                    lastVector = vector3;
+                }
             }
             return newDistance;
         }

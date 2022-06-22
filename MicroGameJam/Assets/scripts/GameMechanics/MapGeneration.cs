@@ -18,12 +18,22 @@ namespace GameMechanics
         public RuleTile tile;
         public int rooms;
 
+        private bool scaned;
         private Vector3[,] RoomCenter;
         private int[,] _dungeon;
 
         private void Start()
         {
             CreateMap();
+        }
+
+        private void Update()
+        {
+            if (!scaned && Time.time > .1)
+            {
+                AstarPath.active.Scan();
+                scaned = true;
+            }
         }
 
         private void CreateMap()
