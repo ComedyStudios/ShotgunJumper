@@ -24,7 +24,7 @@ public class Gun : Weapon
             var bullet = Instantiate(bulletPrefab, playerTransform.position, Quaternion.Euler(0,0,spread* (i-rayCount/2) + playerTransform.eulerAngles.z));
             var bulletRb = bullet.GetComponent<Rigidbody2D>();
             var bulletScript = bullet.GetComponent<BulletScript>();
-            bulletScript.damage = this.damage;
+            bulletScript.damage = damage * (1+ damageIncrease);
             bulletRb.velocity = bullet.transform.right * bulletSpeed;
         }
         

@@ -266,8 +266,8 @@ TextureImporter:
       name: 91dcf397b84d654_15
       rect:
         serializedVersion: 2
-        x: 612
-        y: 619
+        x: 613
+        y: 635
         width: 204
         height: 204
       alignment: 0
@@ -309,9 +309,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 432
+        y: 462
         width: 204
-        height: 204
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,9 +330,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 204
-        y: 432
+        y: 462
         width: 204
-        height: 204
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -707,8 +707,8 @@ TextureImporter:
       name: 91dcf397b84d654_28
       rect:
         serializedVersion: 2
-        x: 812
-        y: 231
+        x: 816
+        y: 227
         width: 204
         height: 204
       alignment: 0
@@ -882,7 +882,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      91dcf397b84d654_9: -2008370812
+      91dcf397b84d654_15: -320833264
       91dcf397b84d654_2: -252601225
       91dcf397b84d654_17: 1254514697
       91dcf397b84d654_14: 882009586
@@ -917,7 +917,7 @@ TextureImporter:
       91dcf397b84d654_27: -1187547581
       91dcf397b84d654_19: -602852818
       91dcf397b84d654_28: -1221091708
-      91dcf397b84d654_15: -320833264
+      91dcf397b84d654_9: -2008370812
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

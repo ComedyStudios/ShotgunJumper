@@ -11,9 +11,9 @@ namespace MiniGameJam
         private void OnTriggerEnter2D(Collider2D collision)
         {
             var o = collision.gameObject;
-            if (o.CompareTag("Player") && Inventory.Instance.inventorySize > Inventory.Instance.inventory.Count)
+            if (o.CompareTag("Player") && Inventory.instance.inventorySize > Inventory.instance.inventory.Count)
             {
-                Inventory.Instance.Add(item);
+                Inventory.instance.Add(item);
                 Destroy(gameObject);
             }
         }

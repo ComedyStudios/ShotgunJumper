@@ -24,8 +24,8 @@ namespace UI
         public void OnElementPressed()
         {
             item.UseItem();
-            Inventory.Instance.inventory.Remove(item);
-            var count = Inventory.Instance.inventory.Count;
+            Inventory.instance.inventory.Remove(item);
+            var count = Inventory.instance.inventory.Count;
             
             List<Transform> remainingItems = new List<Transform>();
             foreach (Transform child in _parent)
