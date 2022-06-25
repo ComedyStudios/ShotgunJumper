@@ -11,10 +11,10 @@ namespace Enemies
         public float idleDistance;
         public float speed;
         public Transform target;
-
-        protected float LastShotTime;
-        protected float Damage;
-        protected Vector3 Direction;
+        
+        protected float damage;
+        protected float lastShotTime;
+        protected Vector3 direction;
 
         private Path _pathingRate;
         private float _lastTimePathed;
@@ -52,7 +52,7 @@ namespace Enemies
 
             if (_path != null)
             {
-                Direction = PlayerMovement.Player.transform.position - transform.position;
+                direction = PlayerMovement.playerInstance.gameObject.transform.position - transform.position;
                 
                 var newDistance = DistanceToPlayer();
 
@@ -63,7 +63,7 @@ namespace Enemies
                     var moveDirection = (Vector2)(_path.vectorPath[_currentWayPoint] - transform.position).normalized;
                     
                     transform.Translate(moveDirection * (speed * Time.deltaTime), Space.World);
-                    LastShotTime = Time.time;
+                    lastShotTime = Time.time;
                 }
 
                 var distanceToNextPoint = Vector2.Distance(transform.position, _path.vectorPath[_currentWayPoint]);

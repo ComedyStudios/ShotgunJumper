@@ -10,11 +10,12 @@ namespace Enemies
         private float _lastHitTime;
         private EnemyState _state;
 
-        private void Start()
+        private void Awake()
         {
             _state = GetComponent<EnemyState>();
-            Damage = _state.damage;
+            damage = _state.damage;
             SetUpPathfinding();
+            _lastHitTime = Time.time;
         }
 
         void Update() 
@@ -24,7 +25,7 @@ namespace Enemies
             if (Time.time - _lastHitTime >= 1/hitRate && DistanceToPlayer() <= stopDistance)
             {
                 _lastHitTime = Time.time;
-                PlayerState.Instance.health -= (int)Damage;
+                PlayerState.instance.health -= (int)damage;
             }
             
         }

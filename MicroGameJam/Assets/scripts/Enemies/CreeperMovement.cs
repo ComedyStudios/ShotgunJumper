@@ -14,12 +14,13 @@ namespace Enemies
         private EnemyState _state;
         private SpriteRenderer _renderer;
 
-        private void Start()
+        private void Awake()
         {
             _state = GetComponent<EnemyState>();
-            Damage = _state.damage;
+            damage = _state.damage;
             _renderer = GetComponent<SpriteRenderer>();
             SetUpPathfinding();
+            _lastChargeTime = Time.time;
         }
 
         void Update() 
@@ -46,9 +47,9 @@ namespace Enemies
         {
             if (Time.time - _lastChargeTime >= chargeTime)
             {
-                var damage = base.Damage * 1 / (DistanceToPlayer() * damageFallOff);
-                PlayerState.Instance.health -= (int)base.Damage;
-                Debug.Log($"creeper dealt {(int)base.Damage} damage to player");
+                var damage = base.damage * 1 / (DistanceToPlayer() * damageFallOff);
+                PlayerState.instance.health -= (int)base.damage;
+                Debug.Log($"creeper dealt {(int)base.damage} damage to player");
                 Destroy(gameObject);
             }
         }

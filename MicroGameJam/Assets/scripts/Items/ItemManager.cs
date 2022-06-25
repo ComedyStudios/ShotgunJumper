@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using GameMechanics;
 using MiniGameJam;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,17 +11,17 @@ using Random = UnityEngine.Random;
 
 public class ItemManager: MonoBehaviour
 {
-    public List<DropRates> MonsterItems = new List<DropRates>();
-    public List<DropRates> ChestItems = new List<DropRates>();
+    public List<DropRates> monsterItems = new List<DropRates>();
+    public List<DropRates> chestItems = new List<DropRates>();
     public GameObject itemPrefab;
-    public static ItemManager Instance; 
+    public static ItemManager instance; 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
         List<DropRates> sortedArray = new List<DropRates>();
-        if (MonsterItems.Count > 1)
+        if (monsterItems.Count > 1)
         {
-            MonsterItems = SortArray(MonsterItems, 0, MonsterItems.Count-1);
+            monsterItems = SortArray(monsterItems, 0, monsterItems.Count-1);
         }
     }
 
@@ -84,5 +86,22 @@ public class ItemManager: MonoBehaviour
             SortArray(array, i, rightIndex);
 
         return array;
+    }
+    
+    public IEnumerator IncreaseSpeed(float speedIncrease, float increaseDuration)
+    {
+        PlayerMovement.playerInstance.speed *= speedIncrease + 1;
+        yield return new WaitForSeconds(increaseDuration);
+        PlayerMovement.playerInstance.speed /= speedIncrease + 1;
+
+    }
+    public IEnumerator IncreaseDamage(float damageIncrease, float increaseDuration)
+    {
+        Debug.Log(AttackScript.Instance.currentWeapon.damage);
+        AttackScript.Instance.currentWeapon.damage *= damageIncrease + 1;
+        Debug.Log(AttackScript.Instance.currentWeapon.damage);
+        yield return new WaitForSeconds(increaseDuration);
+        AttackScript.Instance.currentWeapon.damage /= damageIncrease + 1;
+        Debug.Log(AttackScript.Instance.currentWeapon.damage);
     }
 }

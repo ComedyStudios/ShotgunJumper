@@ -10,7 +10,7 @@ using Slider = UnityEngine.UI.Slider;
 
 public class PlayerState : MonoBehaviour
 {
-   public static PlayerState Instance;
+   public static PlayerState instance;
    public int maxHealth;
    
    public int healthReduction;
@@ -21,15 +21,15 @@ public class PlayerState : MonoBehaviour
    
    private Slider _slider;
 
-   [HideInInspector]
+   
    public int health;
    
    private float _time;
 
    
-   private void Start()
+   private void Awake()
    {
-      Instance = this;
+      instance = this;
       health = maxHealth;
       _time = Time.time;
       _slider = healthBar.GetComponent<UnityEngine.UI.Slider>();

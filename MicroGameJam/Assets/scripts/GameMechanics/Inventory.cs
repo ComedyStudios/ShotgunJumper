@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace GameMechanics
 {
@@ -14,10 +15,11 @@ namespace GameMechanics
         public List<Weapon> weapons = new List<Weapon>();
         public GameObject inventoryUI;
         public GameObject itemUIElement;
+        public Image circleUI;
         public int inventorySize;
         public float damageIncrease;
         public float weaponChangeTime;
-        
+
         public static Inventory instance;
 
         private float _lastWeaponChange;
@@ -50,6 +52,7 @@ namespace GameMechanics
                 }
                 _lastWeaponChange = Time.time;
             }
+            circleUI.fillAmount = (weaponChangeTime- (Time.time-_lastWeaponChange))/weaponChangeTime;
         }
 
         public void Add(Item item)
@@ -78,7 +81,9 @@ namespace GameMechanics
             weapon.damageIncrease = 0;
             weapons.Add(weapon);
             var uiElement = Instantiate(itemUIElement, weaponUI.transform);
-            uiElement.GetComponent<ItemUIComponent>().item = weapon;
+            var script = uiElement.GetComponent<ItemUIComponent>();
+            script.item = weapon;
+            script.canBeClicked = false;
             weapon.damageIncrease = 0;
         }
 

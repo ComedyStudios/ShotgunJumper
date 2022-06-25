@@ -37,12 +37,12 @@ namespace GameMechanics
             {
                 for (int i = 0; i < randomItemsInChest; i++)
                 {
-                    ItemManager.Instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle, ItemManager.Instance.ChestItems);
+                    ItemManager.instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle, ItemManager.instance.chestItems);
                 }
 
                 foreach (var item in setItemsInChest)
                 {
-                    ItemManager.Instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
+                    ItemManager.instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
                 }
                 Destroy(gameObject);
             }

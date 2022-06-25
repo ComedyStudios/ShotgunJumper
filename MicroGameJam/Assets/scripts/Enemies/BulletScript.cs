@@ -19,13 +19,11 @@ namespace Enemies
         {
             if (other.CompareTag(enemyTag))
             {
-
                 if (!other.TryGetComponent(out EnemyState state))
                 {
-                    PlayerState.Instance.health -= (int)damage;
+                    PlayerState.instance.health -= (int)damage;
                 }
                 else state.currentHealth -= (int)damage;
-                    
                 Destroy(gameObject);
             }
             else if (other.gameObject.layer == LayerMask.NameToLayer("Map"))

@@ -6,7 +6,7 @@ namespace GameMechanics
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public static GameObject Player;
+        public static PlayerMovement playerInstance;
     
         public float speed;
         public InputAction walkAction;
@@ -15,7 +15,7 @@ namespace GameMechanics
 
         private void Start()
         {
-            Player = gameObject;
+            playerInstance = this;
             _rb = GetComponent<Rigidbody2D>();
         }
 

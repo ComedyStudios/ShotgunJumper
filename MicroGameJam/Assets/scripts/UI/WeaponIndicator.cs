@@ -23,7 +23,7 @@ namespace UI
             _cooldownSlider.value = Math.Max(AttackScript.Instance.currentWeapon.hitCooldown - (Time.time - AttackScript.Instance.lastHit),0) /
                                    AttackScript.Instance.currentWeapon.hitCooldown;
             _image.sprite = AttackScript.Instance.currentWeapon.icon;
-            _text.text = AttackScript.Instance.currentWeapon.name;
+            _text.text = AttackScript.Instance.currentWeapon.itemName;
         }
     }
 }

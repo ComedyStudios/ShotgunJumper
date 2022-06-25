@@ -17,22 +17,28 @@ namespace GameMechanics
         public List<Tilemap> tilemaps;
         public RuleTile tile;
         public int rooms;
+        public GameObject hud;
+        public GameObject loadingScreen;
 
-        private bool scaned;
+        private bool _scaned;
         private Vector3[,] RoomCenter;
         private int[,] _dungeon;
 
-        private void Start()
+        private void Awake()
         {
+            _scaned = false;
             CreateMap();
         }
 
         private void Update()
         {
-            if (!scaned && Time.time > .1)
+            if (!_scaned && Time.timeSinceLevelLoad > .1)
             {
+                Debug.Log("loaded the scene " + Time.time);
                 AstarPath.active.Scan();
-                scaned = true;
+                _scaned = true;
+                loadingScreen.SetActive(false);
+                hud.SetActive(true);
             }
         }
 

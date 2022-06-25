@@ -8,7 +8,7 @@
 
         public override void UseItem()
         {
-            PlayerState.Instance.health += healAmount;
+            PlayerState.instance.health += healAmount;
             Debug.Log($"player was healed by {healAmount}");
         }
     }
