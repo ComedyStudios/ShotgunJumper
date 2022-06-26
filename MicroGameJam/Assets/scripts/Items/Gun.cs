@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Enemies;
 using GameMechanics;
 using UnityEngine;
@@ -12,12 +13,6 @@ public class Gun : Weapon
     
     public override void UseWeapon()
     {
-        var playerTransform = AttackScript.Instance.transform;
-        NewMethod();
-    }
-
-    private void NewMethod()
-    {
         for (int i = 0; i< rayCount; i++)
         {
             var playerTransform = AttackScript.Instance.transform;
@@ -27,6 +22,5 @@ public class Gun : Weapon
             bulletScript.damage = damage * (1+ damageIncrease);
             bulletRb.velocity = bullet.transform.right * bulletSpeed;
         }
-        
     }
 }

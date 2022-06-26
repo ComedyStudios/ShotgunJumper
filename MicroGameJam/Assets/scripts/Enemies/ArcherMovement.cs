@@ -1,4 +1,5 @@
-﻿using MiniGameJam;
+﻿using System;
+using MiniGameJam;
 using UnityEngine;
 
 namespace Enemies
@@ -32,7 +33,7 @@ namespace Enemies
                 var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
                 var bulletRb = bullet.GetComponent<Rigidbody2D>();
                 var bulletScript = bullet.GetComponent<BulletScript>();
-                bulletScript.damage = damage;
+                bulletScript.damage = damage - Math.Clamp(PlayerState.instance.defense, 0, damage);
                 bulletRb.velocity = bullet.transform.right * bulletSpeed;
                 lastShotTime = Time.time;
             }

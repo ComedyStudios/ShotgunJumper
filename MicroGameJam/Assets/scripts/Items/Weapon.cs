@@ -8,6 +8,7 @@ public abstract class Weapon: Item
     public float rayLength;
     public float hitCooldown;
     public float damage;
+    [HideInInspector]
     public float damageIncrease;
 
     public override void UseItem()

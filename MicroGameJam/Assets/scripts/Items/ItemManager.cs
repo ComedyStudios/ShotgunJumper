@@ -97,11 +97,15 @@ public class ItemManager: MonoBehaviour
     }
     public IEnumerator IncreaseDamage(float damageIncrease, float increaseDuration)
     {
-        Debug.Log(AttackScript.Instance.currentWeapon.damage);
         AttackScript.Instance.currentWeapon.damage *= damageIncrease + 1;
-        Debug.Log(AttackScript.Instance.currentWeapon.damage);
         yield return new WaitForSeconds(increaseDuration);
         AttackScript.Instance.currentWeapon.damage /= damageIncrease + 1;
-        Debug.Log(AttackScript.Instance.currentWeapon.damage);
+    }
+
+    public IEnumerator IncreaseDefense(float defenseIncrease, float increaseDuration)
+    {   
+        PlayerState.instance.defense += defenseIncrease;
+        yield return new WaitForSeconds(increaseDuration);
+        PlayerState.instance.defense -= defenseIncrease;
     }
 }

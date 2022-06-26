@@ -1590,7 +1590,7 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  currentWeapon: {fileID: 11400000, guid: 572534f3ad32e2d4b875dd1fce004cf6, type: 2}
+  currentWeapon: {fileID: 11400000, guid: d99d7135d28334f4790c786e681bcf37, type: 2}
   lastHit: 0
 --- !u!114 &525925261
 MonoBehaviour:
@@ -1605,6 +1605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  defense: 0
   healthReduction: 1
   text: {fileID: 2017789186}
   healthBar: {fileID: 213913728}

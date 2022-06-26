@@ -1,3 +1,4 @@
+using System;
 using MiniGameJam;
 using UnityEngine;
 
@@ -25,7 +26,7 @@ namespace Enemies
             if (Time.time - _lastHitTime >= 1/hitRate && DistanceToPlayer() <= stopDistance)
             {
                 _lastHitTime = Time.time;
-                PlayerState.instance.health -= (int)damage;
+                PlayerState.instance.health -= (int) (damage - Math.Clamp(PlayerState.instance.defense, 0, damage));
             }
             
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using GameMechanics;
 using MiniGameJam;
 using UnityEngine;
@@ -6,8 +7,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "UnnamedSword", menuName = "item/Weapon/Sword")]
 public class Sword: Weapon
 {
-    
-    
     public override void UseWeapon()
     {
         var anim = AttackScript.Instance.GetComponentInChildren<Animator>();

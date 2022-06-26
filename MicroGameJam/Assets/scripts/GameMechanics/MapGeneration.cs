@@ -34,7 +34,6 @@ namespace GameMechanics
         {
             if (!_scaned && Time.timeSinceLevelLoad > .1)
             {
-                Debug.Log("loaded the scene " + Time.time);
                 AstarPath.active.Scan();
                 _scaned = true;
                 loadingScreen.SetActive(false);

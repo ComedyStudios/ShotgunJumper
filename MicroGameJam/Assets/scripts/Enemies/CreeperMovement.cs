@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Security.Cryptography;
 using MiniGameJam;
 using UnityEngine;
 
@@ -48,8 +49,7 @@ namespace Enemies
             if (Time.time - _lastChargeTime >= chargeTime)
             {
                 var damage = base.damage * 1 / (DistanceToPlayer() * damageFallOff);
-                PlayerState.instance.health -= (int)base.damage;
-                Debug.Log($"creeper dealt {(int)base.damage} damage to player");
+                PlayerState.instance.health -= (int)(damage - Math.Clamp(PlayerState.instance.defense, 0, damage));
                 Destroy(gameObject);
             }
         }

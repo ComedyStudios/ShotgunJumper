@@ -12,8 +12,8 @@ public class PlayerState : MonoBehaviour
 {
    public static PlayerState instance;
    public int maxHealth;
-   
    public int healthReduction;
+   public float defense;
    public TextMeshProUGUI text;
    public GameObject healthBar;
    public GameObject gameOverCanvas;

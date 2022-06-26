@@ -15,7 +15,7 @@ D:/games/unity/ShotgunJumper/MicroGameJam
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-59435
+55362
 Successfully changed project path to: D:/games/unity/ShotgunJumper/MicroGameJam
 D:/games/unity/ShotgunJumper/MicroGameJam
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/games/unity/ShotgunJumper/MicroGameJam
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 101.04 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 98.11 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.13f1 (90b6766da538)
 [Subsystems] Discovering subsystems at path E:/installs E/unity editors/2021.2.13f1/Editor/Data/Resources/UnitySubsystems
@@ -63,45 +63,1779 @@ Initialize mono
 Mono path[0] = 'E:/installs E/unity editors/2021.2.13f1/Editor/Data/Managed'
 Mono path[1] = 'E:/installs E/unity editors/2021.2.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/installs E/unity editors/2021.2.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56268
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/installs E/unity editors/2021.2.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: E:/installs E/unity editors/2021.2.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005705 seconds.
+Registered in 0.004559 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 108.58 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 91.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.432 seconds
+- Completed reload, in  0.722 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1433ms)
-		BeginReloadAssembly (191ms)
+	ReloadAssembly (722ms)
+		BeginReloadAssembly (83ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (901ms)
-			LoadAssemblies (191ms)
+		EndReloadAssembly (525ms)
+			LoadAssemblies (83ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (394ms)
+			SetupTypeCache (126ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (396ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (313ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (78ms)
+				InitializePlatformSupportModulesInManaged (57ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (109ms)
+				RefreshPlugins (92ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (61ms)
+				ProcessInitializeOnLoadAttributes (111ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007260 seconds.
-Android Extension - Scanning For ADB Devices 5191 ms
+Registered in 0.005075 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\unity\ShotgunJumper\MicroGameJam\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\unity\ShotgunJumper\MicroGameJam\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 81.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.849 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1850ms)
+		BeginReloadAssembly (224ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (130ms)
+		EndReloadAssembly (1519ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (252ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (1077ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (82ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (848ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4427 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (56.3 KB). Loaded Objects now: 4891.
+Memory consumption went from 168.7 MB to 168.7 MB.
+Total: 3.033200 ms (FindLiveObjects: 0.308800 ms CreateObjectMapping: 0.261800 ms MarkObjects: 2.400000 ms  DeleteObjects: 0.061900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006418 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\games\unity\ShotgunJumper\MicroGameJam\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\games\unity\ShotgunJumper\MicroGameJam\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.187 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1187ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (961ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (526ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (404ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.84 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4399 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (24.7 KB). Loaded Objects now: 4893.
+Memory consumption went from 166.3 MB to 166.3 MB.
+Total: 2.763500 ms (FindLiveObjects: 0.260100 ms CreateObjectMapping: 0.186100 ms MarkObjects: 2.299900 ms  DeleteObjects: 0.016500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 543405.651042 seconds.
+  path: Assets/ScriptableObjects/Fists.asset
+  artifactKey: Guid(572534f3ad32e2d4b875dd1fce004cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjects/Fists.asset using Guid(572534f3ad32e2d4b875dd1fce004cf6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3aa0137a5944db970d90d7a01925d85') in 0.034788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1435.621148 seconds.
+  path: Assets/animation/slice.anim
+  artifactKey: Guid(2af3c70482d3c70488931609a5fef74b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/animation/slice.anim using Guid(2af3c70482d3c70488931609a5fef74b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '93646f2fa4d4cd6893577d1fe409e8f6') in 0.055618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ScriptableObjects/Shotgun.asset
+  artifactKey: Guid(7d962c7cc1e0ef24cb4127132f26d2d4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/ScriptableObjects/Shotgun.asset using Guid(7d962c7cc1e0ef24cb4127132f26d2d4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1206bedccf37f35236f05f799c1b8b8') in 0.009114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/Navmesh/NavmeshUpdates.cs
+  artifactKey: Guid(8c8c76379ef6d496bb3624f29adc556a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Navmesh/NavmeshUpdates.cs using Guid(8c8c76379ef6d496bb3624f29adc556a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0fd1da77de33ff7b9beab884a68659e3') in 0.011728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/CustomGraphEditorAttribute.cs
+  artifactKey: Guid(576dcf42aca804a48b5923974edaee01) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/CustomGraphEditorAttribute.cs using Guid(576dcf42aca804a48b5923974edaee01) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0a0aa47a0e66fca007d1218610d94baa') in 0.009324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AstarPathfindingProject/Generators/QuadtreeGraph.cs
+  artifactKey: Guid(4931e76e5e5784200a904f4b59596556) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/QuadtreeGraph.cs using Guid(4931e76e5e5784200a904f4b59596556) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '14f28c943fe334e578bcc319727fe783') in 0.008086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/scripts/Input.cs
+  artifactKey: Guid(8de6466b44384534e93dc8d26306bc73) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Input.cs using Guid(8de6466b44384534e93dc8d26306bc73) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '53b1eae7c751efda829c0856c3e40956') in 0.007566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Core/GraphUpdateShape.cs
+  artifactKey: Guid(1c31d3b0be14344e98aa458dc66c3a94) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/GraphUpdateShape.cs using Guid(1c31d3b0be14344e98aa458dc66c3a94) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f562da2c52e58b392d6e2319b91412b') in 0.007190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/PathUtilities.cs
+  artifactKey: Guid(7d93ae7d64ab84e23819ac5754065f34) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/PathUtilities.cs using Guid(7d93ae7d64ab84e23819ac5754065f34) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ee51b98ef321fabf9a5b3e90121145cd') in 0.006695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AstarPathfindingProject/Generators/Base.cs
+  artifactKey: Guid(c7636164485c04efe8fad73ab1ee985f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/Base.cs using Guid(c7636164485c04efe8fad73ab1ee985f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '232227a6948a2e9b23a2ab21298bd449') in 0.008267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Scenes/SettingsScene.unity
+  artifactKey: Guid(74c6412e420ac124da5f0278f0c7dad3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scenes/SettingsScene.unity using Guid(74c6412e420ac124da5f0278f0c7dad3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5a081db8ccaefe3521e772c0a8c4e882') in 0.007498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/link.xml
+  artifactKey: Guid(6b30aa8ff756d44008247c6f4f1b94fd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/link.xml using Guid(6b30aa8ff756d44008247c6f4f1b94fd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d89dc1d81dcd68c1edd4da3e0bf8ff3') in 0.014983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/AstarPathfindingProject/Pathfinders/ABPath.cs
+  artifactKey: Guid(7833eca4f9a3c4a119943a3ef09cdfc9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Pathfinders/ABPath.cs using Guid(7833eca4f9a3c4a119943a3ef09cdfc9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6eb5784f6e9a91ffb03b5e135cc0f91b') in 0.008774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Behaviors/AIDestinationSetter.cs
+  artifactKey: Guid(c9679e68a0f1144e79c664d9a11ca121) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Behaviors/AIDestinationSetter.cs using Guid(c9679e68a0f1144e79c664d9a11ca121) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '62c57f15240a3151075407da3e839a70') in 0.007273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/scripts/CameraMovement.cs
+  artifactKey: Guid(c1efe0ea70c064549b80936807a3337b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/CameraMovement.cs using Guid(c1efe0ea70c064549b80936807a3337b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f0db5ccbe3dcfab7feb2530aa96c970c') in 0.006961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Core/GraphUpdateScene.cs
+  artifactKey: Guid(efee954c69f0d421086729bb8df1137f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/GraphUpdateScene.cs using Guid(efee954c69f0d421086729bb8df1137f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7bfecd9ec68a4a47e811867d682fcd84') in 0.007236 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/AstarPathfindingProject/Generators/PointGenerator.cs
+  artifactKey: Guid(f7458b5480c614cebb219a8f7f5df111) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/PointGenerator.cs using Guid(f7458b5480c614cebb219a8f7f5df111) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f2f6fc5b0a5c967abcfb2b8a65905dd0') in 0.007359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/AstarChecksum.cs
+  artifactKey: Guid(8959628b7b47f4ccca91bcfa87d9f77e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/AstarChecksum.cs using Guid(8959628b7b47f4ccca91bcfa87d9f77e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7e875849ec39d526f817667147b33d95') in 0.007130 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Documentation/documentation.html
+  artifactKey: Guid(6549c7b2e2cf5e591a7b810697ba7c5b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Documentation/documentation.html using Guid(6549c7b2e2cf5e591a7b810697ba7c5b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c88d0a1f9ab4fe96a11f8b4e490a5d14') in 0.010223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AstarPathfindingProject/Editor/GraphUpdateSceneEditor.cs
+  artifactKey: Guid(4c7bf5208cabd4676a4691ce4541bd62) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/GraphUpdateSceneEditor.cs using Guid(4c7bf5208cabd4676a4691ce4541bd62) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ebbeb419a3887603b8827204746b5f79') in 0.006960 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/ProfileHelper.cs
+  artifactKey: Guid(8ec9029c797ec471fa8b5640e1829fc0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/ProfileHelper.cs using Guid(8ec9029c797ec471fa8b5640e1829fc0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56867f3c16f77e1b194776b4ce39a1b4') in 0.007722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/AstarPathfindingProjectEditor.asmdef
+  artifactKey: Guid(865575785c1524f888e47306de0c1246) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/AstarPathfindingProjectEditor.asmdef using Guid(865575785c1524f888e47306de0c1246) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ebfb05344db263c89de98263f70e8313') in 0.009763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/scripts/Input.inputactions
+  artifactKey: Guid(87df3d721f0abf74188490e6e3ca312e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Input.inputactions using Guid(87df3d721f0abf74188490e6e3ca312e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd267d4daf2a9ed1f46bcdd36bf83d760') in 0.015887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprites/pngfind.com-white-circles-png-3619117.png
+  artifactKey: Guid(41b0900b363d0714abe0662826984f0b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/pngfind.com-white-circles-png-3619117.png using Guid(41b0900b363d0714abe0662826984f0b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f88f86a35fb4d1ecc99daaa1a9594700') in 0.021767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/PackageTools/UniqueComponentAttribute.cs
+  artifactKey: Guid(e256d5533142c4434897b4da38791511) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/PackageTools/UniqueComponentAttribute.cs using Guid(e256d5533142c4434897b4da38791511) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '077d4d96042b3443370ab8db5204be22') in 0.009002 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/animation/Square 1.controller
+  artifactKey: Guid(c6d28379b2c4e2446a9606dc64f03399) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/animation/Square 1.controller using Guid(c6d28379b2c4e2446a9606dc64f03399) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56e6d3bd50fe9458f1787265b4a83fcf') in 0.008785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/AstarPathEditor.cs
+  artifactKey: Guid(aa27fa41f8abe460a8b64e13d7be43ad) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/AstarPathEditor.cs using Guid(aa27fa41f8abe460a8b64e13d7be43ad) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ef0ab39b0335b59b2595553bd3efea81') in 0.009848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/GraphUpdateUtilities.cs
+  artifactKey: Guid(b5818f65b5e1449c1ae6f20de9f75ff5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/GraphUpdateUtilities.cs using Guid(b5818f65b5e1449c1ae6f20de9f75ff5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd0b057aefb8a0b669ae6ab9d20751628') in 0.007211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/AstarPathfindingProject/AstarPathfindingProject.asmdef
+  artifactKey: Guid(efa45043feb7e4147a305b73b5cea642) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/AstarPathfindingProject.asmdef using Guid(efa45043feb7e4147a305b73b5cea642) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2c91fa7ed80fa70745c9e1d3f092ce2a') in 0.008047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Modifiers/RaycastModifier.cs
+  artifactKey: Guid(b090bec917bbe4c3bbc612ef13f7c4a1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Modifiers/RaycastModifier.cs using Guid(b090bec917bbe4c3bbc612ef13f7c4a1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bf88a02e8663df17753b78d96ba81e66') in 0.007654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/BulletPrefab 1.prefab
+  artifactKey: Guid(12ae69e7290060f439d83d5863c60fe0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/BulletPrefab 1.prefab using Guid(12ae69e7290060f439d83d5863c60fe0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '36578701d0cc251bbecdd0c141940d07') in 0.015716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Prefabs/Item.prefab
+  artifactKey: Guid(a5bc259dcd7841f49ac68ef82a945c76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Item.prefab using Guid(a5bc259dcd7841f49ac68ef82a945c76) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5481f90efc6f39d640dd98f2cac79a1b') in 0.009839 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/scripts/GameMechanics/ItemPickup.cs
+  artifactKey: Guid(1575e687a7c042819494c137b3d54ee4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/GameMechanics/ItemPickup.cs using Guid(1575e687a7c042819494c137b3d54ee4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d51c1cbe642b3c18478641f8c6e91d8') in 0.011149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/scripts/Items/Item.cs
+  artifactKey: Guid(e23c779f7888447caa49ea5c85a4953d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Items/Item.cs using Guid(e23c779f7888447caa49ea5c85a4953d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '31acf2e790a7c6bc90cc5cdbf44fe406') in 0.007654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/scripts/Items/Sword.cs
+  artifactKey: Guid(9e1f7a43f59548e29ac384c1da006679) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Items/Sword.cs using Guid(9e1f7a43f59548e29ac384c1da006679) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a03b77ae968994397f97b428ab4ad3e3') in 0.014163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/scripts/Items/HealingPotion.cs
+  artifactKey: Guid(b9fd7e733f8b4410a821d1569b5afcf2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Items/HealingPotion.cs using Guid(b9fd7e733f8b4410a821d1569b5afcf2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7330132c926c3b8b94ff3288c696d0f3') in 0.008151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/scripts/Enemies/EnemyState.cs
+  artifactKey: Guid(78877f6260e448d6b1a375a8c1e41254) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Enemies/EnemyState.cs using Guid(78877f6260e448d6b1a375a8c1e41254) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd77b6f20664749e9f4a8cb73388faa73') in 0.007303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/UI/Square.prefab
+  artifactKey: Guid(daef0a7ceddf19d40bf7270cc827b4c4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/UI/Square.prefab using Guid(daef0a7ceddf19d40bf7270cc827b4c4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a17fef982f824a37ee6ca842a4458dc') in 0.011334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/scripts/GameMechanics/PlayerMovement.cs
+  artifactKey: Guid(2db68765f173387459f2ebf2af28ec9a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/GameMechanics/PlayerMovement.cs using Guid(2db68765f173387459f2ebf2af28ec9a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '83807460b954fd0815a089a8dc1aacee') in 0.009750 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/Maps/MapPrefab 7.prefab
+  artifactKey: Guid(03fa9ff2a195ce54088752bc37081702) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Maps/MapPrefab 7.prefab using Guid(03fa9ff2a195ce54088752bc37081702) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b110e30c8ca7dc0b44f2d9e0de076847') in 0.029445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Scenes/StartScreen.unity
+  artifactKey: Guid(7e2d2faa020fa174ab13b0f9d400cba9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Scenes/StartScreen.unity using Guid(7e2d2faa020fa174ab13b0f9d400cba9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '507ae28926e2807fb068c9a6b65513df') in 0.007586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Generators/NavmeshBase.cs
+  artifactKey: Guid(f8b76f19632144117a3ac7f28faf2c15) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/NavmeshBase.cs using Guid(f8b76f19632144117a3ac7f28faf2c15) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '83059340b138ee21a0307d4d3248f08d') in 0.008165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/AstarPathfindingProject/Generators/GridGenerator.cs
+  artifactKey: Guid(d5d28978e568e40429b2981fab3e380e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/GridGenerator.cs using Guid(d5d28978e568e40429b2981fab3e380e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f133da306979c32b90a3210ff4df36ea') in 0.007506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/UI/ItemUIElement.prefab
+  artifactKey: Guid(a0336f06411d6f14884e526933ac52aa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/UI/ItemUIElement.prefab using Guid(a0336f06411d6f14884e526933ac52aa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5363cbc06fc3e74562cfc371eb242c13') in 0.049652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/scripts/GameMechanics/PlayerState.cs
+  artifactKey: Guid(2a8d86a2c02048549bd1daa1d9a7fa8f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/GameMechanics/PlayerState.cs using Guid(2a8d86a2c02048549bd1daa1d9a7fa8f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e97ba25530ddf027f20626864e807faf') in 0.009832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Core/AstarPath.cs
+  artifactKey: Guid(78396926cbbfc4ac3b48fc5fc34a87d1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/AstarPath.cs using Guid(78396926cbbfc4ac3b48fc5fc34a87d1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c3ddff9c048ce62d312543911f3dce5') in 0.007263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/scripts/Constants.cs
+  artifactKey: Guid(2f3d37383c8441a29ba8abe66bef9fa6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Constants.cs using Guid(2f3d37383c8441a29ba8abe66bef9fa6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7d85e0b15637e9fbb13220bde9a9dc58') in 0.007169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/AIBaseEditor.cs
+  artifactKey: Guid(ab4eeab9df88a4d069163baf60aad496) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/AIBaseEditor.cs using Guid(ab4eeab9df88a4d069163baf60aad496) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f7f6b689e674e385efd45e910d341d7a') in 0.008136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Legacy/LegacyAIPath.cs
+  artifactKey: Guid(c5ac18cdd242041b6bebc0e95b624c85) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Legacy/LegacyAIPath.cs using Guid(c5ac18cdd242041b6bebc0e95b624c85) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aac46b3014c7d18896e7f970bfc6a48d') in 0.007852 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Core/PathHandler.cs
+  artifactKey: Guid(7cc885607b0534cc6a4a34c4caa58d89) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/PathHandler.cs using Guid(7cc885607b0534cc6a4a34c4caa58d89) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fdfa12d04ef3732202afdd2f3776b24c') in 0.007329 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/UnityReferenceHelper.cs
+  artifactKey: Guid(632ae7eb1d4ce49d38a1e38ee7efe7c5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/UnityReferenceHelper.cs using Guid(632ae7eb1d4ce49d38a1e38ee7efe7c5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b112f075560a06d43c17ef6f47df68d8') in 0.008176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Sprites/flamenco-178.png
+  artifactKey: Guid(79ee011e3d6d0ba4eb8337232ce2d86d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/flamenco-178.png using Guid(79ee011e3d6d0ba4eb8337232ce2d86d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '54f1f245d2cedb370c73b306c1033eb7') in 0.014817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/scripts/Enemies/ZombieMovement.cs
+  artifactKey: Guid(954347ae282fbd44ea2d946bd976e0ae) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Enemies/ZombieMovement.cs using Guid(954347ae282fbd44ea2d946bd976e0ae) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '11521b5d452fec5eae799812b8b7523e') in 0.006776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/AstarParallel.cs
+  artifactKey: Guid(fa95ccba91f5c4ab8922aa7859f0a300) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/AstarParallel.cs using Guid(fa95ccba91f5c4ab8922aa7859f0a300) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '70fc97460d6b92854f3a6d1e1cbca313') in 0.007423 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AstarPathfindingProject/Core/astarclasses.cs
+  artifactKey: Guid(f499b0552bded40b6a9d474dfb94343a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/astarclasses.cs using Guid(f499b0552bded40b6a9d474dfb94343a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3fa50ea4002b3b9dd1d92703f6244bf4') in 0.009555 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Editor/SeekerEditor.cs
+  artifactKey: Guid(95febb4c5ed8c46939368f03ecf4b3b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/SeekerEditor.cs using Guid(95febb4c5ed8c46939368f03ecf4b3b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c0c705540d34b1229f924a020587bd6') in 0.008441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/AstarPathfindingProject/Modifiers/FunnelModifier.cs
+  artifactKey: Guid(77f586f285b3847808d79083bd19ef1f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Modifiers/FunnelModifier.cs using Guid(77f586f285b3847808d79083bd19ef1f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2545e743c956dc7fce4ed33c111ad7e5') in 0.012313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/pngegg.png
+  artifactKey: Guid(b917aa724f6492542866ac6dc0889c0f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/pngegg.png using Guid(b917aa724f6492542866ac6dc0889c0f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cba9f86cf7134d84df8397b5e94860c2') in 0.010006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/scripts/Enemies/BulletScript.cs
+  artifactKey: Guid(b52074ecfca849869ba841400a6ec81f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Enemies/BulletScript.cs using Guid(b52074ecfca849869ba841400a6ec81f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '29eb3b5fbc43c89b6049076d119098f2') in 0.009672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader
+  artifactKey: Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader using Guid(dd89cf5b9246416f84610a006f916af7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd967af181f24572aa5e8d2f950424933') in 0.016064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_21.asset
+  artifactKey: Guid(6d6487ea3be952148aa4cb665d2c04db) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_21.asset using Guid(6d6487ea3be952148aa4cb665d2c04db) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff4ed817596abb3b61603d5e7ad29483') in 0.011265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/scripts/UI/Score.cs
+  artifactKey: Guid(1ba2ad321ed33674fa89101460e9e6c5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/UI/Score.cs using Guid(1ba2ad321ed33674fa89101460e9e6c5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de6bb962665abf8e07e5b9df58b2e7d3') in 0.006596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
+  artifactKey: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '29524c71ec679ef65262cf161a4ac4d5') in 0.019380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
+  artifactKey: Guid(d930090c0cd643c7b55f19a38538c162) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc using Guid(d930090c0cd643c7b55f19a38538c162) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '39604e58e822ae22bf919b0e93788b7b') in 0.011248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader
+  artifactKey: Guid(128e987d567d4e2c824d754223b3f3b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader using Guid(128e987d567d4e2c824d754223b3f3b0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40fd984b123d0a5837617125b162e94a') in 0.008992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_7.asset
+  artifactKey: Guid(65c47cae17729b542bcc4fbac0bcd173) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_7.asset using Guid(65c47cae17729b542bcc4fbac0bcd173) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b07a35e075d1c8399dd93ceceac6880f') in 0.010939 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_0.asset
+  artifactKey: Guid(db81779059930d84f935e33fd823186d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_0.asset using Guid(db81779059930d84f935e33fd823186d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ccc030881f0f8a0a571319184c24bea') in 0.008144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/scripts/UI/ItemUIComponent.cs
+  artifactKey: Guid(b39e3f82ed41bfe4db05d625c63dbe90) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/UI/ItemUIComponent.cs using Guid(b39e3f82ed41bfe4db05d625c63dbe90) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd13aa7b880019ce7b967ea264c9a588') in 0.009812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader
+  artifactKey: Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader using Guid(a02a7d8c237544f1962732b55a9aebf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4ec8d5c7fa2559bfdbb7f09c0fcc4270') in 0.010921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader
+  artifactKey: Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader using Guid(f7ada0af4f174f0694ca6a487b8f543d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '253344a29adeaf8d9a204a3fe7611869') in 0.011376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc
+  artifactKey: Guid(c334973cef89a9840b0b0c507e0377ab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc using Guid(c334973cef89a9840b0b0c507e0377ab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '07e2add259616823704c35660b0c9a1a') in 0.009243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/tilemaps/NewPalette.prefab
+  artifactKey: Guid(dbeef94635086c346bb2ce8a5ae1d072) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/NewPalette.prefab using Guid(dbeef94635086c346bb2ce8a5ae1d072) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c53b64357b90ac1d1d489ded4adb7402') in 0.019359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_20.asset
+  artifactKey: Guid(3765f1bbe25a3ed49b05f04711c72ce5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_20.asset using Guid(3765f1bbe25a3ed49b05f04711c72ce5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8005f2d96f9abd0719e9b7cd08f6e012') in 0.009475 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/scripts/Enemies/Enemy.cs
+  artifactKey: Guid(9fc068c54eae4b278310a07d8d617ff3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Enemies/Enemy.cs using Guid(9fc068c54eae4b278310a07d8d617ff3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5dc4c756ef54624a9e763e74ac433e71') in 0.008534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Prefabs/Maps/MapPrefab 8.prefab
+  artifactKey: Guid(01d6c8d0059c8da45b9f4be781e47893) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/Maps/MapPrefab 8.prefab using Guid(01d6c8d0059c8da45b9f4be781e47893) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4774cd09ba94a3baaa02ca22811134d7') in 0.017103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/scripts/Items/Weapon.cs
+  artifactKey: Guid(d4bf83b68a6f469fb275fcdab02b6496) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Items/Weapon.cs using Guid(d4bf83b68a6f469fb275fcdab02b6496) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6349ca7405d640fea79a5525065c814d') in 0.010890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/DotNetReplacements.cs
+  artifactKey: Guid(c306b1bfc824f40909c5a91e06e4090f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/DotNetReplacements.cs using Guid(c306b1bfc824f40909c5a91e06e4090f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0ca3ff90b46e29e291f812c2a31a127c') in 0.009211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/Modifiers/StartEndModifier.cs
+  artifactKey: Guid(f72dd5db0de344ea19ae250ac5b68903) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Modifiers/StartEndModifier.cs using Guid(f72dd5db0de344ea19ae250ac5b68903) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6773cddef36e166880c87ae432b1276b') in 0.007951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Generators/NavMeshGenerator.cs
+  artifactKey: Guid(ffae751ca240c466185a168f4a9836cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/NavMeshGenerator.cs using Guid(ffae751ca240c466185a168f4a9836cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '458bd26d5b4072150d1df9b0a5e47bc1') in 0.008645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_2.asset
+  artifactKey: Guid(0bee565f0a47713428b1b116a1e96810) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_2.asset using Guid(0bee565f0a47713428b1b116a1e96810) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '459662dac8b0e9a0096eaf0ab69fa355') in 0.008153 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Legacy/MiscLegacy.cs
+  artifactKey: Guid(8caf3dccb5aae46daa9684e513307841) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Legacy/MiscLegacy.cs using Guid(8caf3dccb5aae46daa9684e513307841) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0318033e16dd4e7852b22f6192b942df') in 0.009472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/scripts/Items/DamageBoost.cs
+  artifactKey: Guid(0163ca601aff4a45b138672e769c2c9d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Items/DamageBoost.cs using Guid(0163ca601aff4a45b138672e769c2c9d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5bf28612138088341cb5a6cfd7fc4a7e') in 0.007197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/AstarProfiler.cs
+  artifactKey: Guid(0d7c020300da24330bbc70ec30fee5d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/AstarProfiler.cs using Guid(0d7c020300da24330bbc70ec30fee5d5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b99aeb6ada5cbbafbebd2b59b9bdbf5') in 0.006883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt
+  artifactKey: Guid(6e59c59b81ab47f9b6ec5781fa725d2c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt using Guid(6e59c59b81ab47f9b6ec5781fa725d2c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '445eecf30f795695995f0dbfd20ad52c') in 0.009256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/TurnBased/BlockManager.cs
+  artifactKey: Guid(df8c077ca577944689559bb9e97f9576) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/TurnBased/BlockManager.cs using Guid(df8c077ca577944689559bb9e97f9576) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '412d237fd4e8c1fefce58785494bd61b') in 0.008181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AstarPathfindingProject/Modifiers/AlternativePath.cs
+  artifactKey: Guid(a537d958aa5bb4f35b0d7b40d72278f2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Modifiers/AlternativePath.cs using Guid(a537d958aa5bb4f35b0d7b40d72278f2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b5af58e877516fe34afcaf025b9c39c') in 0.007170 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AstarPathfindingProject/Documentation/index.md
+  artifactKey: Guid(2b79fd5a5af73e4559215bde8ebd75e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Documentation/index.md using Guid(2b79fd5a5af73e4559215bde8ebd75e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0b78e9215930a29ae179573cf332f8ec') in 0.009474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TextMesh Pro/Resources/TMP Settings.asset
+  artifactKey: Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Resources/TMP Settings.asset using Guid(3f5b5dff67a942289a9defa416b206f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e3de7f525c8423fd95ffa342f278ad1') in 0.008109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/BinaryHeap.cs
+  artifactKey: Guid(eb4299e8747f44ad2b4e086752108ea3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/BinaryHeap.cs using Guid(eb4299e8747f44ad2b4e086752108ea3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b00f640a6dc5f9d622f8a2ad2f6f73be') in 0.007258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/GraphEditorBase.cs
+  artifactKey: Guid(704136724bc95455ebe477f42f5c5a84) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/GraphEditorBase.cs using Guid(704136724bc95455ebe477f42f5c5a84) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d06b8e5877d03768e83b5ce5f5ae50c') in 0.009047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Core/Nodes/GraphNode.cs
+  artifactKey: Guid(a660e0d66fb3b49d19d438de51ac6744) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Nodes/GraphNode.cs using Guid(a660e0d66fb3b49d19d438de51ac6744) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5c7958b275c626fb348c2576fff0e9dc') in 0.007513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/AutoRepathPolicy.cs
+  artifactKey: Guid(2664ef60fd2811ba280670298a6d312b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/AutoRepathPolicy.cs using Guid(2664ef60fd2811ba280670298a6d312b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0d4570ccda951d1919e8fe3bf6077dab') in 0.008545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/GraphEditors/PointGeneratorEditor.cs
+  artifactKey: Guid(b563cffdf75ee4497b91d4ac8e106260) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/GraphEditors/PointGeneratorEditor.cs using Guid(b563cffdf75ee4497b91d4ac8e106260) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b9fb03493e5775acd4b68f587d5636ab') in 0.007128 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/NodeLink3.cs
+  artifactKey: Guid(3850d0dc2bead45568e6b5bbcc011606) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/NodeLink3.cs using Guid(3850d0dc2bead45568e6b5bbcc011606) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9e90225939f9e67aab8c31e38252a6ba') in 0.006881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/PathPool.cs
+  artifactKey: Guid(cefe1014ab62848a89016fb97b1f8f7b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/PathPool.cs using Guid(cefe1014ab62848a89016fb97b1f8f7b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7889c79d136ffc5004bf8889a0e3d0b0') in 0.007141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000137 seconds.
+  path: Assets/AstarPathfindingProject/Core/Serialization/JsonSerializer.cs
+  artifactKey: Guid(edd6db33319e94141bb849f4f58261c3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Serialization/JsonSerializer.cs using Guid(edd6db33319e94141bb849f4f58261c3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b1aa54f3e7e8de68d18fe5e54f44f233') in 0.008302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/GraphUtilities.cs
+  artifactKey: Guid(fd178834bf6c54cdb8fc5f76a039a91c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/GraphUtilities.cs using Guid(fd178834bf6c54cdb8fc5f76a039a91c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd571e25d9aabd16b040aeaa990b59135') in 0.009123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Core/AI/AILerp.cs
+  artifactKey: Guid(847a14d4dc9cc43679ab34fc78e0182f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/AI/AILerp.cs using Guid(847a14d4dc9cc43679ab34fc78e0182f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56b101cb079deff31b223f993927a3e8') in 0.006497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/PathInterpolator.cs
+  artifactKey: Guid(9c0392dbc5e744ee28e7b9ee81aea1e2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/PathInterpolator.cs using Guid(9c0392dbc5e744ee28e7b9ee81aea1e2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aff2b43ce4bfc71600b30219930eb068') in 0.008337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/ArrayPool.cs
+  artifactKey: Guid(787a564bf2d894ee09284b775074864c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/ArrayPool.cs using Guid(787a564bf2d894ee09284b775074864c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e9f507ab6bcfdc5c4657653e1b1dee6') in 0.006797 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/linkButton_normal.png
+  artifactKey: Guid(53ee29e7cbeb545bcb1ca238a2736fb8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/linkButton_normal.png using Guid(53ee29e7cbeb545bcb1ca238a2736fb8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '27140b415a9fd7ef6d47738472bb99c0') in 0.011996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/AnimationLink.cs
+  artifactKey: Guid(d2e8b1fd6fa484fc29f8a26fb5e8662b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/AnimationLink.cs using Guid(d2e8b1fd6fa484fc29f8a26fb5e8662b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '556e99ea37b9e8bd9804d577093a265d') in 0.007957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/grid.psd
+  artifactKey: Guid(527965173b00f43f9a1b8fc9e8c2e64b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/grid.psd using Guid(527965173b00f43f9a1b8fc9e8c2e64b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c8a1601f9880756b99dbabe5cfdb13b8') in 0.024265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/scene_box@1x.png
+  artifactKey: Guid(a4bb5812f98bf40a68d9c1a69ad860cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/scene_box@1x.png using Guid(a4bb5812f98bf40a68d9c1a69ad860cb) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2cddd6b3ee5f89c6176849ae182b277f') in 0.011455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/MovementUtilities.cs
+  artifactKey: Guid(0a6cffd9895f94907aa43f18b0904587) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/MovementUtilities.cs using Guid(0a6cffd9895f94907aa43f18b0904587) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8b89178eee24a7fcc7a8c1aafeb019a5') in 0.023408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/scene_box@2x.png
+  artifactKey: Guid(f834e7df6f42446b59c83dca1e5bd098) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/scene_box@2x.png using Guid(f834e7df6f42446b59c83dca1e5bd098) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff5552daaf554ae5db3eee95362c8044') in 0.017519 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/Editor/GraphEditors/GraphEditor.cs
+  artifactKey: Guid(b0bbfd9d85ec946b2a05cdeaab0d6f5f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/GraphEditors/GraphEditor.cs using Guid(b0bbfd9d85ec946b2a05cdeaab0d6f5f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a679fbfbe31374339016942f67fc8eb6') in 0.007187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/PathReturnQueue.cs
+  artifactKey: Guid(70ca370ae38794366be2fa32880f362e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/PathReturnQueue.cs using Guid(70ca370ae38794366be2fa32880f362e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '75a844560779579106f61708269a6a97') in 0.007760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/GraphModifier.cs
+  artifactKey: Guid(39897fb482672480a817862c3909a4aa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/GraphModifier.cs using Guid(39897fb482672480a817862c3909a4aa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f37b160ed699d676a28fa1ed1405631') in 0.008095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/EditorResourceHelper.cs
+  artifactKey: Guid(8127bc49e9e2d42dfa7a4e057842f165) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/EditorResourceHelper.cs using Guid(8127bc49e9e2d42dfa7a4e057842f165) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f793cddb5d6dbb53a722be4e452a5f91') in 0.007442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/Legacy/LegacyAIPathEditor2.cs
+  artifactKey: Guid(5075ffc0df8c943368fa824db55589b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/Legacy/LegacyAIPathEditor2.cs using Guid(5075ffc0df8c943368fa824db55589b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9e887ffb28129d13e56f07b718e847f9') in 0.007574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/pixelBox3_separator.png
+  artifactKey: Guid(e101da2dcb7a14fa2aed1a65c384a99b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/pixelBox3_separator.png using Guid(e101da2dcb7a14fa2aed1a65c384a99b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c51cff85c337ffc81269b0d2f4490c0c') in 0.012277 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf
+  artifactKey: Guid(1b8d251f9af63b746bf2f7ffe00ebb9b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf using Guid(1b8d251f9af63b746bf2f7ffe00ebb9b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40c816a33105747962d22634f5040480') in 0.009472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/StackPool.cs
+  artifactKey: Guid(de467bbbb1ff84668ae8262caad00941) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/StackPool.cs using Guid(de467bbbb1ff84668ae8262caad00941) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '666376737b51684e20043bf8ae7fb37a') in 0.007123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_19.asset
+  artifactKey: Guid(70a6cdcba2abb694c9f724c046ee0bf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_19.asset using Guid(70a6cdcba2abb694c9f724c046ee0bf1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6438fb2306b5027b7a93a311a34c9482') in 0.012884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_14.asset
+  artifactKey: Guid(187db700265e08e4e8b2ca07d44b8bdd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_14.asset using Guid(187db700265e08e4e8b2ca07d44b8bdd) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0ed01195fa1eba9cab720878cda15ae9') in 0.008740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt
+  artifactKey: Guid(fade42e8bc714b018fac513c043d323b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt using Guid(fade42e8bc714b018fac513c043d323b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'be3a6fb030f5675c2aacae409cf5cebf') in 0.007689 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/AstarEditorSkinDark.guiskin
+  artifactKey: Guid(8fc713511eb5d4fb9937ab63de6af346) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/AstarEditorSkinDark.guiskin using Guid(8fc713511eb5d4fb9937ab63de6af346) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b6c2d8c84b013dcb071f4879764b8e2') in 0.016345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAnimation.cs
+  artifactKey: Guid(8503d71a898994d3288ce1708e2707fe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAnimation.cs using Guid(8503d71a898994d3288ce1708e2707fe) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '47d744cf0653ea3bff7a41d7ea8aa054') in 0.009075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/ground.psd
+  artifactKey: Guid(b0749c40ee03a46eaa0401867a08b963) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/ground.psd using Guid(b0749c40ee03a46eaa0401867a08b963) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd2fac235d21932516724840417f78292') in 0.011132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/Door.mat
+  artifactKey: Guid(863174fbef875425ca78e4c949f12318) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/Door.mat using Guid(863174fbef875425ca78e4c949f12318) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8aac7086da44ca7a5911abfd17906c58') in 0.015426 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/example6.fbx
+  artifactKey: Guid(7fdfb9a3e0fdf4df880ebc7fa5f56398) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/example6.fbx using Guid(7fdfb9a3e0fdf4df880ebc7fa5f56398) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e7527b4b315da0311411497f48909624') in 0.101681 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Generators/NodeClasses/PointNode.cs
+  artifactKey: Guid(986ad6174b59e40068c715a916740ce9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/NodeClasses/PointNode.cs using Guid(986ad6174b59e40068c715a916740ce9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ba020d852cbe2067853e6b7e5599c281') in 0.007836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralGround.prefab
+  artifactKey: Guid(61432558c555740a38a88fa99d358883) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralGround.prefab using Guid(61432558c555740a38a88fa99d358883) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '58d45705e66af4dc58265d5face58ed0') in 0.013245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/ModifierEditors/SmoothModifierEditor.cs
+  artifactKey: Guid(1b6748a8c87024ddd9cc5f3c5e19ab60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/ModifierEditors/SmoothModifierEditor.cs using Guid(1b6748a8c87024ddd9cc5f3c5e19ab60) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '671fda7bc8527b6922beba04907821fc') in 0.009189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/DiffuseAlwaysVisible.shader
+  artifactKey: Guid(5c4aad560e4da4a59aa10f6f2f6e84ce) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/DiffuseAlwaysVisible.shader using Guid(5c4aad560e4da4a59aa10f6f2f6e84ce) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fb0b9d87a4fb4a58a7051548a995f215') in 0.007185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example2_Terrain/checkerGround.psd
+  artifactKey: Guid(ee2523340e7944c4297a80937a51484c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example2_Terrain/checkerGround.psd using Guid(ee2523340e7944c4297a80937a51484c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fd9b179e3bbcc8a5ebbf6ba049d14da9') in 0.012537 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/ObjectPlacer.cs
+  artifactKey: Guid(687e3bc0934ac46d3957e59872965f3c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/ObjectPlacer.cs using Guid(687e3bc0934ac46d3957e59872965f3c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0f30012e8612e8f0f2d6c9a07cb0f18') in 0.007703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab2.prefab
+  artifactKey: Guid(1c63e47cea3074ee89305fd4cefa91e8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab2.prefab using Guid(1c63e47cea3074ee89305fd4cefa91e8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8b4736a73d4900c33dbeeb47e5213220') in 0.014412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/TargetMover.cs
+  artifactKey: Guid(f903c2eb621d8418d88f8dad81b13dc6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/TargetMover.cs using Guid(f903c2eb621d8418d88f8dad81b13dc6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4f6f38976e6f0c24011fad7c13b18bb5') in 0.009838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example2_Terrain/dynamicObstacle.anim
+  artifactKey: Guid(fca8a128acb4a4567ae3aacfdb0e4a13) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example2_Terrain/dynamicObstacle.anim using Guid(fca8a128acb4a4567ae3aacfdb0e4a13) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '240a5ac9bd01d9634389ae774021ef1b') in 0.013350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Generators/Utilities/GridLookup.cs
+  artifactKey: Guid(7b09e5cbe5d4644c2b4ed9eed14cc13a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/Utilities/GridLookup.cs using Guid(7b09e5cbe5d4644c2b4ed9eed14cc13a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '42f21a8f9246e91246a6af5b139e41aa') in 0.007467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs
+  artifactKey: Guid(3f35b84b127b849e38b74966118e7e0f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs using Guid(3f35b84b127b849e38b74966118e7e0f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '85e14fc8d5faf84c60be0438959629da') in 0.008181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/NavmeshExample.unity
+  artifactKey: Guid(32536486e77cc4002ae78cd83c90bb2b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/NavmeshExample.unity using Guid(32536486e77cc4002ae78cd83c90bb2b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2e5223327221dea8f364657c60006d6e') in 0.006929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab1.prefab
+  artifactKey: Guid(b11992e5e8afb4e63a1ccab9daf6f07c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab1.prefab using Guid(b11992e5e8afb4e63a1ccab9daf6f07c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '495921a284111f431839f3184f906ec8') in 0.014745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralWorld.cs
+  artifactKey: Guid(b265527da9152484fa74392751085576) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralWorld.cs using Guid(b265527da9152484fa74392751085576) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '683a373848c18c9218b81e831b177959') in 0.007071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/Procedural.unity
+  artifactKey: Guid(9df9f020877fb4842b75396ddf708b69) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/Procedural.unity using Guid(9df9f020877fb4842b75396ddf708b69) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5fd434fd9c9ac201e49cbc886eff6ae1') in 0.007943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Generators/NodeClasses/GridNodeBase.cs
+  artifactKey: Guid(1b723ddfaa37b46eca23cd8d042ad3e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/NodeClasses/GridNodeBase.cs using Guid(1b723ddfaa37b46eca23cd8d042ad3e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '18388efa2adf6096729907c9338754fa') in 0.006987 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/GroundRTS.mat
+  artifactKey: Guid(48404990b059d4ad881cae67992eb592) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/GroundRTS.mat using Guid(48404990b059d4ad881cae67992eb592) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56bc1319a020987ecb99505d11dd262e') in 0.011801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/AstarSmoothFollow2.cs
+  artifactKey: Guid(46fb00c7e6ad9485282a146ad398a2a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/AstarSmoothFollow2.cs using Guid(46fb00c7e6ad9485282a146ad398a2a5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f8bb781b63d3188acf3dccb20f7b5d6') in 0.008114 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/PointGraphExample.unity
+  artifactKey: Guid(1cd57dbb745d9402f97fa830e41cd128) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/PointGraphExample.unity using Guid(1cd57dbb745d9402f97fa830e41cd128) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '625bf1864052016fe13c96ab2a24ccad') in 0.011087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/ex5Ground.mat
+  artifactKey: Guid(46e0ecefe2ba442a5825f21e42530872) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/ex5Ground.mat using Guid(46e0ecefe2ba442a5825f21e42530872) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '79957546febeb1afc3fb331bafb940ea') in 0.021584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/Legacy/Editor/LegacyAIPathEditor.cs
+  artifactKey: Guid(4075ffc0df8c943368fa824db55589b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Legacy/Editor/LegacyAIPathEditor.cs using Guid(4075ffc0df8c943368fa824db55589b4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f94ab4f27df35f3dafa9543c7cd7ab25') in 0.007152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_off@1x.png
+  artifactKey: Guid(b05124c2b9dc5429a84ef0195a916fce) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_off@1x.png using Guid(b05124c2b9dc5429a84ef0195a916fce) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '89fedf7195e89781cabfdabc0e25b009') in 0.008542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_off@2x.png
+  artifactKey: Guid(3772050cdbd2a472789aa76d6de5b270) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_off@2x.png using Guid(3772050cdbd2a472789aa76d6de5b270) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '60332d8b2391eebb9d47eff37186fc43') in 0.012052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton_active@2x.png
+  artifactKey: Guid(9b266e42522c048f6b62832985be51ed) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton_active@2x.png using Guid(9b266e42522c048f6b62832985be51ed) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '28d7ffa79d317b8058b4f21a2e0b4eb7') in 0.011424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_on@2x.png
+  artifactKey: Guid(a454b67ef7bd04780aca99e364202679) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_on@2x.png using Guid(a454b67ef7bd04780aca99e364202679) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '362acc8c2ec225bb0fa5f885be28032d') in 0.012187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox3@2x.png
+  artifactKey: Guid(9043fef44c60647b7a763eb86f912ba1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox3@2x.png using Guid(9043fef44c60647b7a763eb86f912ba1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de8b4b7c9412bb71ead0d1d4dfa0683e') in 0.012268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ebc26bbcad62053e223e7542a8646f3') in 0.008958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox3_separator.png
+  artifactKey: Guid(3a08de11a34c44da28de4c086fd13461) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox3_separator.png using Guid(3a08de11a34c44da28de4c086fd13461) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b285eab05705e8cc2db739bfffb62ca8') in 0.007791 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_on@1x.png
+  artifactKey: Guid(54ad5f6eb8a9349568e58cd1204388a2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/gizmoButton_on@1x.png using Guid(54ad5f6eb8a9349568e58cd1204388a2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f9065c87dec43a269e02c9e290765114') in 0.008734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset
+  artifactKey: Guid(c41005c129ba4d66911b75229fd70b45) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset using Guid(c41005c129ba4d66911b75229fd70b45) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc7c6275dd0c29e08461bbdb7f18c135') in 0.007486 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png
+  artifactKey: Guid(aaae516f9c5404f77a3e586cdd59695b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@1x.png using Guid(aaae516f9c5404f77a3e586cdd59695b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '285d333c3303de61bf9de08b75a66f93') in 0.007556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/editButton_active@1x.png
+  artifactKey: Guid(e0cb3cc51f25a48bf8b0c647452b09b1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/editButton_active@1x.png using Guid(e0cb3cc51f25a48bf8b0c647452b09b1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e81c5a60cde37d3fcd6806443753bbc9') in 0.012062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png
+  artifactKey: Guid(957d0fd6ae3494da9aed50c5d7d7ce4e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_open@2x.png using Guid(957d0fd6ae3494da9aed50c5d7d7ce4e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '095e9b4d3e591aa300fddc128415b022') in 0.011395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/PackageTools/Editor/PackageToolsEditor.asmdef
+  artifactKey: Guid(774e21169c4ac4ec8a01db9cdb98d33b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/PackageTools/Editor/PackageToolsEditor.asmdef using Guid(774e21169c4ac4ec8a01db9cdb98d33b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4afec04be95270c4152f4e20455eca88') in 0.009759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox2.png
+  artifactKey: Guid(5d951d0a838a34f40ac2b9ce8968a7d6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/pixelBox2.png using Guid(5d951d0a838a34f40ac2b9ce8968a7d6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '65509b3631e6120dc9b15cc6bbb53e56') in 0.007816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Legacy/Editor/LegacyEditorHelper.cs
+  artifactKey: Guid(f97cec2d4f06c4d0eb0068c24cb47ca1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Legacy/Editor/LegacyEditorHelper.cs using Guid(f97cec2d4f06c4d0eb0068c24cb47ca1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd4bfc314a41d36826fcaf632621d4fa') in 0.008144 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/PackageTools/Editor/EditorBase.cs
+  artifactKey: Guid(58753931a68ae48b3973d0ce32d1a760) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/PackageTools/Editor/EditorBase.cs using Guid(58753931a68ae48b3973d0ce32d1a760) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ed97c3f7175a4fd226ece970f6fff41d') in 0.007209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton_active@1x.png
+  artifactKey: Guid(d008deade2077407fbf14446df2547c9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton_active@1x.png using Guid(d008deade2077407fbf14446df2547c9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22a0ac96b9331d81ed502d5d4cc625f5') in 0.012576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@2x.png
+  artifactKey: Guid(6c38830c1556942fcb6ce893085d1daa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/lock_closed@2x.png using Guid(6c38830c1556942fcb6ce893085d1daa) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '53e942fbef5b90b7bc13edbd3b018faa') in 0.012094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/hex_diameter@2x.png
+  artifactKey: Guid(36094f49ffe31443eb5e8ea185115a1d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/hex_diameter@2x.png using Guid(36094f49ffe31443eb5e8ea185115a1d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8feda049b674d0a7e89fba99840b8927') in 0.013270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll
+  artifactKey: Guid(fe33c6edd001f4cc2a772cb71aff86be) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll using Guid(fe33c6edd001f4cc2a772cb71aff86be) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c3b8f9417001ed80aab4db4151471287') in 0.010409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/deleteButton@1x.png
+  artifactKey: Guid(b5a4a564ac2dc4261a13719673f157e1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/deleteButton@1x.png using Guid(b5a4a564ac2dc4261a13719673f157e1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ad74f861c3167c29b04bf31f88d7db6e') in 0.008453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton@1x.png
+  artifactKey: Guid(1986ec06d68774254928f44b896a3913) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/infoButton@1x.png using Guid(1986ec06d68774254928f44b896a3913) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c328474a825275254e46aa77073eb76f') in 0.007427 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Generators/Utilities/PointKDTree.cs
+  artifactKey: Guid(4aef007a0dd474c20872caa35fbbc8a7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/Utilities/PointKDTree.cs using Guid(4aef007a0dd474c20872caa35fbbc8a7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '808ac4e72393998e393e45b4ef3c279a') in 0.009171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Generators/Utilities/NavmeshTile.cs
+  artifactKey: Guid(7408cbadf2e744d22853a92b15abede1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Generators/Utilities/NavmeshTile.cs using Guid(7408cbadf2e744d22853a92b15abede1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4765d0c1285a8a8f55c81b5d93636205') in 0.007669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/Wall.mat
+  artifactKey: Guid(cf1ecd0b49db547c4b565a629c69a256) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/Wall.mat using Guid(cf1ecd0b49db547c4b565a629c69a256) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '265843452eb5beebd4798c933b151a77') in 0.015241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/editButton_active@2x.png
+  artifactKey: Guid(f6a4baf90a7bb4e4a92abe07f1a0a9d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/editButton_active@2x.png using Guid(f6a4baf90a7bb4e4a92abe07f1a0a9d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6ac9cf5ed96ce232e1f08050c681d187') in 0.013982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab3.prefab
+  artifactKey: Guid(18cb121974c6b4be387c66d4e1ce5bf8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralPrefab3.prefab using Guid(18cb121974c6b4be387c66d4e1ce5bf8) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'af857deb14c019a770f38d7f98bf46f7') in 0.013237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/scripts/GameMechanics/AttackScript.cs
+  artifactKey: Guid(475e0066f0a4a074b81e2a73e3f34eab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/GameMechanics/AttackScript.cs using Guid(475e0066f0a4a074b81e2a73e3f34eab) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd6bad6618af7ed0a619c55b55acf658b') in 0.009267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/TextMesh Pro/Sprites/EmojiOne.json
+  artifactKey: Guid(8f05276190cf498a8153f6cbe761d4e6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Sprites/EmojiOne.json using Guid(8f05276190cf498a8153f6cbe761d4e6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3419d77c0d5a73e4fcd461f0d6ff4bf8') in 0.007660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/pixelBox3@1x.png
+  artifactKey: Guid(86cd0618b10f3494c831ac9215649110) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/pixelBox3@1x.png using Guid(86cd0618b10f3494c831ac9215649110) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '77814e3fe98c54e9d20ec48bd3142887') in 0.010920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_diameter@2x.png
+  artifactKey: Guid(5a358b45ec6c34f20b9f792e1f259b4f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_diameter@2x.png using Guid(5a358b45ec6c34f20b9f792e1f259b4f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4de6e316a5759c1e263407a316e8b7fd') in 0.011762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/Textures/Falloff.psd
+  artifactKey: Guid(6f8825d71b24a41f79429012e915aab5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/Textures/Falloff.psd using Guid(6f8825d71b24a41f79429012e915aab5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '403aa257a0ba488fdb9d16987c3754b4') in 0.011836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/images/ArrowUp.png
+  artifactKey: Guid(b1722c752c8754c5281b2efd6cf8477c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/images/ArrowUp.png using Guid(b1722c752c8754c5281b2efd6cf8477c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '05a0c6ac38fee9a4ecbe2a60377eba03') in 0.011790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/gizmoButton_off@2x.png
+  artifactKey: Guid(deb2afb942c3b42fbba8823da7f05894) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/gizmoButton_off@2x.png using Guid(deb2afb942c3b42fbba8823da7f05894) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '312b6ca6dfafc71f95080cf481686178') in 0.012825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot.controller
+  artifactKey: Guid(75b096e6c847f4e22be41113329a0693) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot.controller using Guid(75b096e6c847f4e22be41113329a0693) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f3ea613fade8b92b2fd93301f0d7a9a') in 0.006254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_diameter@1x.png
+  artifactKey: Guid(b1817d211ea3547f088cddf76f3e6647) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_diameter@1x.png using Guid(b1817d211ea3547f088cddf76f3e6647) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '83f88d315b871711cb2ae852d0e1ad9b') in 0.014094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/images/gridPivotSelect_Normal.png
+  artifactKey: Guid(9de7a15ab4e1d48da9861247bc34226d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/images/gridPivotSelect_Normal.png using Guid(9de7a15ab4e1d48da9861247bc34226d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2745f4a7115205302376fed0da831f6e') in 0.012557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/lock_open@2x.png
+  artifactKey: Guid(d04d4a88875f842c88825d3d5b2b529c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/lock_open@2x.png using Guid(d04d4a88875f842c88825d3d5b2b529c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22cd3f3acc0bef7d409f58c58911e05c') in 0.013846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@back.FBX
+  artifactKey: Guid(a13fed205b1fa3942abfab7ba21463ec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@back.FBX using Guid(a13fed205b1fa3942abfab7ba21463ec) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f567cb590a9844c3d6a71cb780cff741') in 0.021580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/images/upDownButtons_02.png
+  artifactKey: Guid(c7970d065c27b4d7c9ac2ff73b61733e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/images/upDownButtons_02.png using Guid(c7970d065c27b4d7c9ac2ff73b61733e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de7f8b3890f1cfba9c42b232937ddea0') in 0.011869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/infoButton@2x.png
+  artifactKey: Guid(7ef0e648811f14f65b69c2df3f27de11) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/infoButton@2x.png using Guid(7ef0e648811f14f65b69c2df3f27de11) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4379d29a7eb45717766443f0444da397') in 0.011582 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/Materials/navmesh-navmesh_example6navmeshMat.mat
+  artifactKey: Guid(1f2d61fa60ed54991a4e629fdb13e1f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example6_Navmesh/Materials/navmesh-navmesh_example6navmeshMat.mat using Guid(1f2d61fa60ed54991a4e629fdb13e1f3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '52a9c85353150aea3e3b039647c2f724') in 0.012159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton_active@2x.png
+  artifactKey: Guid(f7ae6f90d33d043c684812513307ec16) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton_active@2x.png using Guid(f7ae6f90d33d043c684812513307ec16) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3969aaa5e426c22a5d889830b9fabce7') in 0.012403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton@1x.png
+  artifactKey: Guid(71ef598858974450ead310c33f29d5d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton@1x.png using Guid(71ef598858974450ead310c33f29d5d3) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd7bd652ef37e191a02310ab54b3ee75b') in 0.013557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/Materials/line_falloff_1px.png
+  artifactKey: Guid(6267c94129d874d7bafe507aa753046a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/Materials/line_falloff_1px.png using Guid(6267c94129d874d7bafe507aa753046a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc6bc04acee995129f9af2b0d22501b8') in 0.012524 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/idle.anim
+  artifactKey: Guid(60beda8287b9b40af9a67b70527af106) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/idle.anim using Guid(60beda8287b9b40af9a67b70527af106) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b65cde667694890f32f4d7cc395698e7') in 0.014389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/gizmoButton_off@1x.png
+  artifactKey: Guid(c780955fc9d0f458abc0de8f2f9cedb2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/gizmoButton_off@1x.png using Guid(c780955fc9d0f458abc0de8f2f9cedb2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bf2aaf56ebdca1b3dea4b2e44d3a5a0e') in 0.015049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/images/upDownArrow_01.png
+  artifactKey: Guid(e4a6b67ac365349d8b7c358676aaf022) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/images/upDownArrow_01.png using Guid(e4a6b67ac365349d8b7c358676aaf022) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '02201f324dc4ddba8d28820c2f4b73b3') in 0.013202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect-03.png
+  artifactKey: Guid(0758c9e42111d4aec99694c875e9badc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect-03.png using Guid(0758c9e42111d4aec99694c875e9badc) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e224cb4a5e20ddd9f2e463fa3ce88fba') in 0.013640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton_active@1x.png
+  artifactKey: Guid(3354fe2e1951d420fa49d8f4fec2954b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/editButton_active@1x.png using Guid(3354fe2e1951d420fa49d8f4fec2954b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '06ecbd5876d284a0b4078488daaa58a4') in 0.010952 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@awake.FBX
+  artifactKey: Guid(7e212db0aa2c00b448aa511ece336f20) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@awake.FBX using Guid(7e212db0aa2c00b448aa511ece336f20) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2dcbf1cfa9ee5a3c12dbd4cacb79e0e0') in 0.017924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot_render.prefab
+  artifactKey: Guid(0b9c68ddd67ee5b9e8aeca86ac0fbc03) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot_render.prefab using Guid(0b9c68ddd67ee5b9e8aeca86ac0fbc03) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '361c4b6e82438e214ee114721cc8081d') in 0.015804 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/pixelBox3@2x.png
+  artifactKey: Guid(5ed56a3e069cd4b5aa4360154acc026a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/pixelBox3@2x.png using Guid(5ed56a3e069cd4b5aa4360154acc026a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4a0b36f3d7f603324f782ece59f716f') in 0.014765 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@right.FBX
+  artifactKey: Guid(f8136785e54fd1d459d2a3a0849fe770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@right.FBX using Guid(f8136785e54fd1d459d2a3a0849fe770) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9012e2eb493607f87e5f6122c1df69e5') in 0.020929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect_Normal.png
+  artifactKey: Guid(37972c32346084c13bfddb8c3dbed143) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect_Normal.png using Guid(37972c32346084c13bfddb8c3dbed143) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4421b4b401c2a0dcea763a1499641a97') in 0.007783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect_On.png
+  artifactKey: Guid(7ea4fc739ffbb4af1a466f655bf1d178) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect_On.png using Guid(7ea4fc739ffbb4af1a466f655bf1d178) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '95e4c1782374f0dcfda951496b5f2250') in 0.007520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot@forward-01 - Default.mat
+  artifactKey: Guid(7c7ae9bbdf3d944e7877ee4243ac4801) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot@forward-01 - Default.mat using Guid(7c7ae9bbdf3d944e7877ee4243ac4801) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7093bc047059444e72a464e81e487108') in 0.011702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot@back-01 - Default.mat
+  artifactKey: Guid(0d2961682f01448ef8b2bf2cc390a419) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot@back-01 - Default.mat using Guid(0d2961682f01448ef8b2bf2cc390a419) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '514d64a25164b5840f596cdc1a37bc39') in 0.014047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect.png
+  artifactKey: Guid(5006aa4ede39e49198b851d98e267b5d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/DarkSkin/images/gridPivotSelect.png using Guid(5006aa4ede39e49198b851d98e267b5d) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3f590ac935f7e750724f1be2be0c337b') in 0.012625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot-01 - Default.mat
+  artifactKey: Guid(1829738127541482a895692670703544) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/Materials/mine_bot-01 - Default.mat using Guid(1829738127541482a895692670703544) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '28edf1a176e7935528735179a00df59a') in 0.012778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/deleteButton@2x.png
+  artifactKey: Guid(6444e8eb74e6f40e0a966d1e26744d08) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/deleteButton@2x.png using Guid(6444e8eb74e6f40e0a966d1e26744d08) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fc78803427ae2b4f1416e859c04f4636') in 0.012104 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/reset_on.png
+  artifactKey: Guid(990963b32226c440fb1a72e47e0ad7a2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/reset_on.png using Guid(990963b32226c440fb1a72e47e0ad7a2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c4a438c09a232004aaa2788d7e598319') in 0.012308 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/Materials/Navmesh.shader
+  artifactKey: Guid(6dad35c0b62e44c26ab244ad80deee1a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/Materials/Navmesh.shader using Guid(6dad35c0b62e44c26ab244ad80deee1a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a3bd4fcdd1e84b00146a1b0427fc1e47') in 0.007345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/deleteButton@1x.png
+  artifactKey: Guid(3240f334343ca4dee8239c16d2de57c6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/deleteButton@1x.png using Guid(3240f334343ca4dee8239c16d2de57c6) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '37dd641c89273ee5387dfa0cdfe836e3') in 0.011747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_width@2x.png
+  artifactKey: Guid(6010a63a238ef4899872fe5bd998dbb5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Editor/EditorAssets/LightSkin/hex_width@2x.png using Guid(6010a63a238ef4899872fe5bd998dbb5) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f568c245501a0ebf643a5d92bfe1c7b') in 0.013880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/package.json
+  artifactKey: Guid(3ac1373cf6a4265d5aa9dfad713bbbb7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/package.json using Guid(3ac1373cf6a4265d5aa9dfad713bbbb7) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e7fe38edd7bb25fffc4cd383a90f2e3') in 0.007756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset
+  artifactKey: Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset using Guid(f952c082cb03451daed3ee968ac6c63e) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23258b0880a0fb9424ffb89b17ae45ae') in 0.010869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_Sprite.shader
+  artifactKey: Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_Sprite.shader using Guid(cf81c85f95fe47e1a27f6ae460cf182c) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '16df13f1271bca7e7dbf52744fbac85b') in 0.008932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/AstarPathfindingProject/Core/Serialization/TinyJson.cs
+  artifactKey: Guid(761fd44fdff0b40648c9b7ce7763a06f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Serialization/TinyJson.cs using Guid(761fd44fdff0b40648c9b7ce7763a06f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '59f9df78dffa3202cb94533a92879778') in 0.008724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/PackageTools/Editor/EditorGUIx.cs
+  artifactKey: Guid(2b6b4977544da4af3a4fe9e895fb6888) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/PackageTools/Editor/EditorGUIx.cs using Guid(2b6b4977544da4af3a4fe9e895fb6888) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fa2b3c3da6e52309c9d41ea005d75f08') in 0.008323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/BulletPrefab.prefab
+  artifactKey: Guid(eea289df51c6d0944894ea0a22ff8d7f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Prefabs/BulletPrefab.prefab using Guid(eea289df51c6d0944894ea0a22ff8d7f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd35d6230e85de0a06d39786b5c5e9047') in 0.012757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/TurnBased/SingleNodeBlocker.cs
+  artifactKey: Guid(b45e20632f1604fc6bb73e0e79cd7368) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/TurnBased/SingleNodeBlocker.cs using Guid(b45e20632f1604fc6bb73e0e79cd7368) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd55ac84900884769b1a186cc770af77a') in 0.007740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/scripts/UI/StartScreenButtonManager.cs
+  artifactKey: Guid(679ef7287a314ea69a50c29dd52ad8ee) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/UI/StartScreenButtonManager.cs using Guid(679ef7287a314ea69a50c29dd52ad8ee) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e9cb2e97e81b6067219d0a23d457c67f') in 0.008406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/ScriptableObjects/HealingPotion 1.asset
+  artifactKey: Guid(4e6d2cd026a171745aab05520450d1e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/ScriptableObjects/HealingPotion 1.asset using Guid(4e6d2cd026a171745aab05520450d1e9) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '692bda1c3b2b2e98d21d85f12224ae5e') in 0.008194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader
+  artifactKey: Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader using Guid(1e3b057af24249748ff873be7fafee47) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c0f452217d7d198cd81e58d90d460c4') in 0.006761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/blackText.mat
+  artifactKey: Guid(87dee5d03323e4003a9785eface0284a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Example5_PointGraph/blackText.mat using Guid(87dee5d03323e4003a9785eface0284a) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4db211b59b55684e122c5b6c5ae18c3c') in 0.011877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/AstarPathfindingProject/Behaviors/Patrol.cs
+  artifactKey: Guid(22e6c29e32504465faa943c537d8029b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Behaviors/Patrol.cs using Guid(22e6c29e32504465faa943c537d8029b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '183bcd231d07fd7cadb3a60075ab9de2') in 0.009003 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Core/Misc/NodeLink2.cs
+  artifactKey: Guid(bd2cfff5dfa8c4244aa00fea9675adb2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Core/Misc/NodeLink2.cs using Guid(bd2cfff5dfa8c4244aa00fea9675adb2) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e38db834dfe0080e60ab2bc6f81f2fee') in 0.007652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/BlueGround.mat
+  artifactKey: Guid(b71b71b0a1f9a48768a27ca6eefcfbdf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/BlueGround.mat using Guid(b71b71b0a1f9a48768a27ca6eefcfbdf) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1864fec8e7b5c124e5c307415bcd9947') in 0.019300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprites/tilemaps/91dcf397b84d654_6.asset
+  artifactKey: Guid(9e728162ca03f6246930895c3b564695) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/Sprites/tilemaps/91dcf397b84d654_6.asset using Guid(9e728162ca03f6246930895c3b564695) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5d2bfecaae1a94e2d2637e9d026e5ac9') in 0.007984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/_Example Scenes.txt
+  artifactKey: Guid(6319be37e337542dbb990c039726bc8f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/_Example Scenes.txt using Guid(6319be37e337542dbb990c039726bc8f) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '00b10c012f91eada3bf776c35ec20f20') in 0.009330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/tiles/map.asset
+  artifactKey: Guid(de8f51a844bf2b94dafcf25986e4717b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/tiles/map.asset using Guid(de8f51a844bf2b94dafcf25986e4717b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd3953335eca0066b882bb7a149c94b5') in 0.007890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/AstarPathfindingProject/ExampleScenes/Materials/BlueBox.mat
+  artifactKey: Guid(99dbb3f3abc3c4845a9b650ff678e7c1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/ExampleScenes/Materials/BlueBox.mat using Guid(99dbb3f3abc3c4845a9b650ff678e7c1) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3788f5ef7082a8dcfa3f4e05b85830fd') in 0.013136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/AstarPathfindingProject/Navmesh/RelevantGraphSurface.cs
+  artifactKey: Guid(d064c7cb576144978a3535f4c71ac247) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Navmesh/RelevantGraphSurface.cs using Guid(d064c7cb576144978a3535f4c71ac247) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c3ad262684e4f57428cf215cf0969fc2') in 0.007654 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/AstarPathfindingProject/Utilities/Funnel.cs
+  artifactKey: Guid(332338376eb42424caa0e3d6bf984a8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/AstarPathfindingProject/Utilities/Funnel.cs using Guid(332338376eb42424caa0e3d6bf984a8b) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fb27f2edbfde7861d6a1ef656f291731') in 0.013234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/scripts/Enemies/CreeperMovement.cs
+  artifactKey: Guid(df1ab508f8a14dc18722ed4d7b2b5fc0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5)
+Start importing Assets/scripts/Enemies/CreeperMovement.cs using Guid(df1ab508f8a14dc18722ed4d7b2b5fc0) Importer(2089858483,934ff659095e30574adcf32a4c2f97b5) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd9cce3a72846e218ccf54dfbc7928be7') in 0.007265 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 18.98 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (48.2 KB). Loaded Objects now: 4898.
+Memory consumption went from 80.8 MB to 80.8 MB.
+Total: 5.744700 ms (FindLiveObjects: 1.642300 ms CreateObjectMapping: 0.692600 ms MarkObjects: 3.332100 ms  DeleteObjects: 0.076100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
