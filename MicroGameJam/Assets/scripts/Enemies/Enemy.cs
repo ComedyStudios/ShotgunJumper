@@ -1,5 +1,6 @@
 ﻿using System;
 using GameMechanics;
+using MiniGameJam;
 using UnityEngine;
 using Pathfinding;
 
@@ -21,6 +22,7 @@ namespace Enemies
         private Path _path;
         private int _currentWayPoint;
         private Seeker _seeker;
+        private bool _playerOutOfRange;
 
         protected void SetUpPathfinding()
         {
@@ -53,21 +55,28 @@ namespace Enemies
             if (_path != null)
             {
                 direction = PlayerMovement.playerInstance.gameObject.transform.position - transform.position;
-                
                 var newDistance = DistanceToPlayer();
-
-
-                if (DistanceToPlayer() > stopDistance && DistanceToPlayer() < idleDistance )
-                {    
+                if ( newDistance < idleDistance)
+                {
+                    if (newDistance > stopDistance)
+                    {
+                        var moveDirection = (Vector2)(_path.vectorPath[_currentWayPoint] - transform.position).normalized;
+                        transform.Translate(moveDirection * (speed * Time.deltaTime), Space.World);
+                        lastShotTime = Time.time;
+                    }
                     
-                    var moveDirection = (Vector2)(_path.vectorPath[_currentWayPoint] - transform.position).normalized;
-                    
-                    transform.Translate(moveDirection * (speed * Time.deltaTime), Space.World);
-                    lastShotTime = Time.time;
+                    if (_playerOutOfRange)
+                    {
+                        _playerOutOfRange = false;
+                        EnemyManager.instance.enemies.Add(gameObject);
+                    }
                 }
-
+                else if(!_playerOutOfRange)
+                {
+                    EnemyManager.instance.enemies.Remove(gameObject);
+                    _playerOutOfRange = true;
+                }
                 var distanceToNextPoint = Vector2.Distance(transform.position, _path.vectorPath[_currentWayPoint]);
-
                 if (distanceToNextPoint < 0.1f && _currentWayPoint < _path.vectorPath.Count-1)
                 {
                     _currentWayPoint++;

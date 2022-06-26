@@ -27,7 +27,6 @@ namespace Enemies
         void Update() 
         {
             Move();
-            
             //reset charge
             if (DistanceToPlayer() > chargeDistance)
             {
@@ -39,8 +38,6 @@ namespace Enemies
             {
                 _renderer.color = Color.red;
             }
-            
-            
             Attack();
         }
 

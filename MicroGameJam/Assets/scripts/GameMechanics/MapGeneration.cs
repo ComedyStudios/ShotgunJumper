@@ -17,8 +17,13 @@ namespace GameMechanics
         public List<Tilemap> tilemaps;
         public RuleTile tile;
         public int rooms;
+        public GameObject doorPrefab;
+        public GameObject winTrigger;
         public GameObject hud;
+        public GameObject winScreen;
         public GameObject loadingScreen;
+
+        public static MapGeneration instace;
 
         private bool _scaned;
         private Vector3[,] RoomCenter;
@@ -26,6 +31,7 @@ namespace GameMechanics
 
         private void Awake()
         {
+            instace = this;
             _scaned = false;
             CreateMap();
         }
@@ -46,8 +52,7 @@ namespace GameMechanics
             mainTilemap.ClearAllTiles();
             _dungeon = GenerateDungeon();
             RoomCenter = new Vector3[_dungeon.GetLength(0), _dungeon.GetLength(1)];
-            
-            Vector3Int start;
+
             for (int i = 0; i < _dungeon.GetLength(0); i++)
             {
                 for (int j = 0; j < _dungeon.GetLength(1); j++)
@@ -57,10 +62,16 @@ namespace GameMechanics
                         SetTiles(j, i);
                         if (_dungeon[i, j] == 1)
                         {
-                            start = new Vector3Int(j * 30, -i * 30);
+                            var start = new Vector3Int(j * 30, -i * 30);
                             var position = mainTilemap.GetComponentInParent<Grid>().GetCellCenterWorld(start);
-                            AttackScript.Instance.transform.position = RoomCenter[i,j];
-                            Camera.main!.transform.position = AttackScript.Instance.transform.position + Vector3.back;
+                            var playerTransform = AttackScript.Instance.transform;
+                            playerTransform.position = RoomCenter[i,j];
+                            Camera.main!.transform.position = playerTransform.position + Vector3.back;
+                        }
+
+                        if (_dungeon[i,j] == 12)
+                        {
+                            Instantiate(winTrigger,RoomCenter[i,j], Quaternion.identity);
                         }
                     }
                 }
@@ -70,7 +81,6 @@ namespace GameMechanics
 
         private void ConnectRooms()
         {
-            List<Tuple<int, int>> connection = new List<Tuple<int, int>>();
             for (int t = 1; t< rooms; t++)
             {
                 var room1 = FindRoom(t);
@@ -87,12 +97,24 @@ namespace GameMechanics
                         }
                     }
 
+                    
+
                     for (int j = -1; j<2; j++)
                     {
                         for (int i = 0; i<Math.Abs(direction.y);i++)
                         {
                             mainTilemap.SetTile(Vector3Int.FloorToInt(RoomCenter[room2.Value.y, room2.Value.x] - new Vector3(j,i* (int)(direction.y/Math.Abs(direction.y)))),tile);
                         }
+                    }
+                    
+                    if (Math.Abs(direction.y) > Math.Abs(direction.x))
+                    {
+                        Instantiate(doorPrefab, RoomCenter[room2.Value.y, room2.Value.x] - new Vector3(-0.5f,14.5f* (int)(direction.y/Math.Abs(direction.y))), Quaternion.Euler(0,0,90));
+                    }
+                    else 
+                    if (direction != Vector3.zero)
+                    {
+                        Instantiate(doorPrefab, RoomCenter[room1.Value.y, room1.Value.x]+ new Vector3(14.5f * (int)(direction.x/Math.Abs(direction.x)),-0.5f ), Quaternion.identity);
                     }
                 }
             }

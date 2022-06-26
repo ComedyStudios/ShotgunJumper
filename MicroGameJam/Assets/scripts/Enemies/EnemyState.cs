@@ -1,4 +1,5 @@
 ﻿using System;
+using GameMechanics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,10 @@ namespace MiniGameJam
             hpSlider.transform.rotation = Quaternion.identity;
             if (currentHealth <= 0)
             {
+                if (EnemyManager.instance.enemies.Contains(gameObject))
+                {
+                    EnemyManager.instance.enemies.Remove(gameObject);
+                }
                 ItemManager.instance.DropRandomItem(transform.position, ItemManager.instance.monsterItems);
                 Destroy(gameObject);
             }

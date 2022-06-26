@@ -35,16 +35,20 @@ namespace GameMechanics
         {
             if ((AttackScript.Instance.transform.position - transform.position).magnitude < GetComponent<CircleCollider2D>().radius)
             {
-                for (int i = 0; i < randomItemsInChest; i++)
+                if (EnemyManager.instance.enemies.Count == 0)
                 {
-                    ItemManager.instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle, ItemManager.instance.chestItems);
-                }
+                    for (int i = 0; i < randomItemsInChest; i++)
+                    {
+                        ItemManager.instance.DropRandomItem(this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle, ItemManager.instance.chestItems);
+                    }
 
-                foreach (var item in setItemsInChest)
-                {
-                    ItemManager.instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
+                    foreach (var item in setItemsInChest)
+                    {
+                        ItemManager.instance.DropSetItem(item, this.transform.position + 0.5f*(Vector3)Random.insideUnitCircle);
+                    }
+                    Destroy(gameObject);
                 }
-                Destroy(gameObject);
+                else Debug.Log("cant open chest, some enemies are hostile towards you");
             }
         }
     }
