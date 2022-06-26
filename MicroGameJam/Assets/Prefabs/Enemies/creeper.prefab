@@ -231,12 +231,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1ab508f8a14dc18722ed4d7b2b5fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stopDistance: 2
-  idleDistance: 20
+  stopDistance: 1
+  idleDistance: 10
   speed: 2
   target: {fileID: 0}
-  chargeDistance: 5
-  chargeTime: 4
+  chargeDistance: 3
+  chargeTime: 3
   damageFallOff: 0.6
 --- !u!114 &1505833154442109791
 MonoBehaviour:

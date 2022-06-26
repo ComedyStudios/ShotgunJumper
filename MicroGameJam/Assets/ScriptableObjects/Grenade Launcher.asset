@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b2653a763c42dfaf2faec5f1de2033, type: 3}
   m_Name: Grenade Launcher
   m_EditorClassIdentifier: 
-  itemName: Granader Launcher
-  icon: {fileID: 0}
+  itemName: Panzerfaust
+  icon: {fileID: 21300000, guid: 0a35d537857ca8649870c256799853ab, type: 3}
   spread: 0
   rayCount: 0
   rayLength: 0
-  hitCooldown: 1
-  damage: 4
+  hitCooldown: 1.5
+  damage: 5
   damageIncrease: 0
-  throwingForce: 800
-  radius: 4.45
+  throwingForce: 1200
+  radius: 7
   timeTillExplosion: 2
   grenadePrefab: {fileID: 8971284302000972757, guid: 5f5d04cf9888a104eb4519100a1d90c5, type: 3}

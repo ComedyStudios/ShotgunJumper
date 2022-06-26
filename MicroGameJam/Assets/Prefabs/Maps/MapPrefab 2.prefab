@@ -3321,11 +3321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.608006
+      value: 42.85
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.350641
+      value: 7.61
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3387,11 +3387,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.810646
+      value: 36.57
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2825775
+      value: 10.33
       objectReference: {fileID: 0}
     - target: {fileID: 5247629499926635145, guid: 6fbb6c8507d243547a758b1022f4f35e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3561,6 +3561,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7150031089233363911, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
+      propertyPath: randomItemsInChest
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150031089233363911, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
+      propertyPath: setItemsInChest.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: d99d7135d28334f4790c786e681bcf37, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
 --- !u!4 &6894093323976662636 stripped
@@ -3621,6 +3629,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7150031089233363910, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150031089233363911, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
+      propertyPath: randomItemsInChest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7150031089233363911, guid: 80073b4ad65eac74ba2c1417c4cbb26e, type: 3}
+      propertyPath: setItemsInChest.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

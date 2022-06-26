@@ -55,7 +55,7 @@ namespace GameMechanics
             }
             foreach (var ray in _rays)
             {
-                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, _rayLength,~LayerMask.GetMask("Player", "Item", "Map", "MapItems"));
+                RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, _rayLength,~LayerMask.GetMask("Player", "Item", "Map", "MapItems", "Bullets"));
                 if (hit == false)
                 {
                     Debug.DrawLine(ray.origin,ray.origin + ray.direction*_rayLength, Color.red);

@@ -8,10 +8,6 @@ namespace GameMechanics
 {
     public class Win: MonoBehaviour
     {
-        public GameObject hud;
-        public GameObject winScreen;
-        public GameObject player;
-        
         private void OnTriggerStay2D(Collider2D other)
         {
             if (other.CompareTag("Player") && EnemyManager.instance.enemies.Count == 0)

@@ -537,8 +537,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120149374}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.365, y: 0.0439, z: 0}
-  m_LocalScale: {x: 1.2773845, y: 1.8103695, z: 0.4117}
+  m_LocalPosition: {x: 2.19, y: 0.0439, z: 0}
+  m_LocalScale: {x: 1.6161469, y: 2.2904794, z: 0.52088284}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 525925254}
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 525925252}
-  speed: 0.009
+  speed: 0.015
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db68765f173387459f2ebf2af28ec9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   walkAction:
     m_Name: Walk
     m_Type: 0
@@ -1993,7 +1993,7 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
-  currentWeapon: {fileID: 11400000, guid: d99d7135d28334f4790c786e681bcf37, type: 2}
+  currentWeapon: {fileID: 11400000, guid: 572534f3ad32e2d4b875dd1fce004cf6, type: 2}
   lastHit: 0
 --- !u!114 &525925261
 MonoBehaviour:
@@ -4394,8 +4394,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d0eb04fcc349c4b03240d6131f7b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterItems: []
-  chestItems: []
+  monsterItems:
+  - item: {fileID: 11400000, guid: 4e6d2cd026a171745aab05520450d1e9, type: 2}
+    weight: 85
+  - item: {fileID: 11400000, guid: ad928cace3c7dc340b3d4322b62c50f8, type: 2}
+    weight: 25
+  - item: {fileID: 11400000, guid: b5fe24fb2aa5bc14f96c690b498c6879, type: 2}
+    weight: 20
+  - item: {fileID: 11400000, guid: 955120ff17488744795b4651c54f3dea, type: 2}
+    weight: 30
+  chestItems:
+  - item: {fileID: 11400000, guid: d99d7135d28334f4790c786e681bcf37, type: 2}
+    weight: 10
+  - item: {fileID: 11400000, guid: 7d962c7cc1e0ef24cb4127132f26d2d4, type: 2}
+    weight: 20
+  - item: {fileID: 11400000, guid: 572534f3ad32e2d4b875dd1fce004cf6, type: 2}
+    weight: 20
+  - item: {fileID: 11400000, guid: b5fe24fb2aa5bc14f96c690b498c6879, type: 2}
+    weight: 5
+  - item: {fileID: 11400000, guid: ad928cace3c7dc340b3d4322b62c50f8, type: 2}
+    weight: 5
+  - item: {fileID: 11400000, guid: 4e6d2cd026a171745aab05520450d1e9, type: 2}
+    weight: 15
   itemPrefab: {fileID: 6061982387495503348, guid: a5bc259dcd7841f49ac68ef82a945c76, type: 3}
 --- !u!4 &1527524439
 Transform:

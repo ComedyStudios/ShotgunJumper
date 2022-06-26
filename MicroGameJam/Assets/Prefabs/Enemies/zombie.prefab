@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopDistance: 1
-  idleDistance: 5
+  idleDistance: 13
   speed: 2
   target: {fileID: 0}
   hitRate: 1
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78877f6260e448d6b1a375a8c1e41254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  damage: 5
+  maxHealth: 30
+  damage: 10
   hpSlider: {fileID: 527752780070547654}
   currentHealth: 0
 --- !u!1 &527752779495866981

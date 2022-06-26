@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae118a12eee4ede927836854a4d4bff, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  name: Shotgun
-  lifeTime: 0
-  icon: {fileID: 0}
-  spread: 20
+  itemName: shot gun
+  icon: {fileID: 21300000, guid: 0c1fa859140ec51438dd33cc12021e66, type: 3}
+  spread: 15
   rayCount: 5
   rayLength: 2
-  hitCooldown: 1
+  hitCooldown: 1.25
   damage: 5
+  damageIncrease: 0
   bulletPrefab: {fileID: 8971284302000972757, guid: 12ae69e7290060f439d83d5863c60fe0, type: 3}
   bulletSpeed: 30

@@ -21,7 +21,7 @@ public class Sword: Weapon
         List<GameObject> targetsInRange = new List<GameObject>();
         foreach (var ray in rays)
         {
-            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, rayLength,~LayerMask.GetMask("Player", "Item", "Map", "MapItems"));
+            RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, rayLength,~LayerMask.GetMask("Player", "Item", "Map", "MapItems", "Bullets"));
             if (hit == true && !targetsInRange.Contains(hit.collider.gameObject))
             {
                 targetsInRange.Add(hit.collider.gameObject);

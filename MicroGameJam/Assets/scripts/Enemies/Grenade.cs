@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using GameMechanics;
 using MiniGameJam;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace Enemies
 {
     public class Grenade : MonoBehaviour
     {
+        public float damageFallOff;
         [HideInInspector]
         public float damage;
         [HideInInspector]
@@ -17,6 +19,7 @@ namespace Enemies
         private void Start()
         {
             StartCoroutine(Explode());
+            Physics2D.IgnoreCollision(this.GetComponent<Collider2D>(), AttackScript.Instance.gameObject.GetComponent<Collider2D>());
         }
 
         public void SetValues(float damage, float radius, float timeTillExplosion)
@@ -36,7 +39,7 @@ namespace Enemies
                 if (collider.CompareTag("Enemy"))
                 {
                     var state = collider.gameObject.GetComponent<EnemyState>();
-                    state.currentHealth -= (int)damage;
+                    state.currentHealth -= (int)(damage * 1 / ((transform.position - collider.transform.position).magnitude * damageFallOff));
                 }
                 else if(collider.CompareTag("Player"))
                 {
