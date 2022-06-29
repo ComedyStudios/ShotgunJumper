@@ -8,6 +8,7 @@ namespace Enemies
 {
     public class Grenade : MonoBehaviour
     {
+        public GameObject grenadeExplosion;
         public float damageFallOff;
         [HideInInspector]
         public float damage;
@@ -34,6 +35,9 @@ namespace Enemies
         {
             yield return new WaitForSeconds(timeTillExplosion);
             var colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
+            var effect = Instantiate(grenadeExplosion, transform.position, Quaternion.identity);
+            var localScale = effect.transform.localScale;
+            localScale = new Vector3(localScale.x * explosionRadius, localScale.y * explosionRadius, 1); effect.transform.localScale = localScale;
             foreach (var collider in colliders)
             {
                 if (collider.CompareTag("Enemy"))
@@ -47,6 +51,9 @@ namespace Enemies
                     state.health -= (int)damage;
                 }
             }
+
+            yield return new WaitForSeconds(0.75f);
+            Destroy(effect);
             Destroy(gameObject);
         }
     }

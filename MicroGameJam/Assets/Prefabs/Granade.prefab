@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf03623a097043f2ae36d9be218cecd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grenadeExplosion: {fileID: 4048633068668379252, guid: 85de098c9833f934d83efc3a5a12cc88, type: 3}
   damageFallOff: 0.4
   damage: 0
   explosionRadius: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   rayCount: 5
   rayLength: 2
   hitCooldown: 1.25
-  damage: 5
+  damage: 6
   damageIncrease: 0
   bulletPrefab: {fileID: 8971284302000972757, guid: 12ae69e7290060f439d83d5863c60fe0, type: 3}
   bulletSpeed: 30
